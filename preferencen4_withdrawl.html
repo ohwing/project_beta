@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourpin &ndash; 환경설정 - 회원 정보 수정</title>
+  <!-- fontawesome-icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <!-- your custom css -->
+  <link rel="stylesheet" href="assets/css/preferencen4_withdrawl.css">
+</head>
+<body>
+  <!-- Header -->
+  <!-- 네비바 -->
+  <header class="header fixed-top">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-sambemi">
+      <a class="navbar-brand navbar-white" href="#">PILOT</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">장근열 여행자님<span class="sr-only">(여행자님 어서오세요! 현재 계급은 파일럿 입니다!)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">여행중</a>
+        </li>
+      </ul>
+      <a class="nav-link navbar-white px-0 py-1 mr-3" href="#"><i class="fa fa-bolt text-white"></i></a>
+      <div class="dropdown">
+        <button class="header__button navbar-white px-0 py-1 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MENU <i class="fa fa-bars text-white"></i>
+        </button>
+        <div class="header__dropdown dropdown-menu mr-auto" aria-labelledby="dropdownMenuButton">
+          <ul class="header__ul text-right p-0 m-0">
+            <li><a class="dropdown-item" href="#">main</a></li>
+            <li><a class="dropdown-item" href="newspeed1.html">newspeed</a></li>
+            <li><a class="dropdown-item" href="group_page.html">tourship</a></li>
+            <li><a class="dropdown-item" href="preference0_reconfirm.html">set-up</a></li>
+            <li><a class="dropdown-item" href="#">logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- // 네비바 -->
+  <!-- // Header -->
+
+  <!-- 피드백 & 도움말 -->
+  <div class="icon d-flex flex-row-reverse mt-5">
+    <button type="button" class="btn__help mr-2 mr-md-4 mt-2" data-toggle="tooltip" data-placement="bottom" title="도움말">
+      <a class="icon-section fa fa-question fa-2x" href="#"></a>
+    </button>
+    <button type="button" class="btn__feedback mr-1 mr-md-3 mt-2" data-toggle="tooltip" data-placement="bottom" title="피드백">
+      <a class="icon-section fa fa-envelope fa-2x" href="#"></a>
+    </button>
+  </div>
+  <!-- // 피드백 & 도움말 -->
+
+  <!-- 환경 설정 메뉴 탭 -->
+  <div class="setting-menu container mb-2">
+    <h1 class="setting__title font-weight-bold mx-2 mx-md-3 mx-lg-4 px-2 px-md-3 px-lg-4">Set-up</h1>
+    <ul class="setting__tabs nav nav-tabs mx-2 mx-md-3 mx-lg-4 px-2 px-md-3 px-lg-4">
+      <li class="setting__menu">
+        <a class="nav-link" href="preference1_information_modification.html">회원 정보 수정</a>
+      </li>
+      <li class="setting__menu">
+        <a class="nav-link" href="preference2_decoration.html">꾸미기</a>
+      </li>
+      <li class="setting__menu">
+        <a class="nav-link" href="preferencen3_notification_&_security.html">알림 &middot; 보안</a>
+      </li>
+      <li class="setting__menu">
+        <a class="nav-link active font-weight-bold" href="preferencen4_withdrawl.html">회원 탈퇴</a>
+      </li>
+    </ul>
+  </div>
+  <!-- // 환경 설정 메뉴 탭 -->
+
+  <!-- 회원 탈퇴 -->
+  <div class="container mt-5">
+    <form class="form-group">
+      <p class="withdrawl text-center">
+        <span class="text_zero">&ldquo;</span>&nbsp;&nbsp;모든&nbsp;&nbsp;<span class="text_first">추억</span>&nbsp;<span class="text_third">이</span> 사라집니다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;정말로&nbsp;&nbsp;<span class="text_first">삭제</span>&nbsp;&nbsp;<span class="text_second">하시겠습니까?&nbsp;&nbsp;</span><span class="text_zero">&rdquo;</span>&nbsp;&nbsp;<br>
+        <span class="text_fourth">&#40;단&#44; 7일동안 유예기간이 있습니다&#46;&#41;</span>
+      </p>
+      <div class="btn d-flex justify-content-center">
+        <button type="button" class="btn__yes py-2 mr-sm-5">
+          <a class="font-weight-bold btn__yes__a" href="#">
+            YES
+          </a>
+        </button>
+      </div>
+      <div class="btn d-flex justify-content-center">
+        <button type="button" class="btn__cancel py-2 mr-sm-5">
+          <a class="font-weight-bold btn__cancel__a" href="#">
+            CANCEL
+          </a>
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- // 회원 탈퇴 -->
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>

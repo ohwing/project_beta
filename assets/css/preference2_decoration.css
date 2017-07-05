@@ -1,0 +1,196 @@
+/* Common Settings */
+html {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+* {
+  color: #666666;
+}
+
+button {
+  border: none;
+  cursor: pointer; /* 버튼에 커서를 올리면 손가락모양으로 바뀐다. */
+}
+
+button:focus {
+  outline: none; /* 버튼에 커서를 클릭하면 바깥줄에 아무것도 적용하지 않는다. */
+  border: none;
+}
+
+a {
+  color: inherit; /* 상위 선택자 *로부터 색 상속 */
+}
+
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn:focus, .btn:active {
+	box-shadow: none;
+}
+
+.bg-faded {
+  background-color: #666666 !important; /* bg-faded 클래스를 적용하면 배경색상을 회색으로 설정 */
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+/* header */
+/* navbar 통일안 */
+.header__button {
+    background-color: inherit;
+}
+
+.navbar-nav, .navbar {
+    flex-direction: row;
+}
+
+.dropdown-menu {
+    right: 0;
+    left: inherit;
+}
+
+.dropdown-item {
+    font-size: 1.1rem;
+}
+
+.header__dropdown {
+	border: 0;
+	background-color: #666666;
+}
+
+.header__ul {
+	list-style-type: none;
+}
+
+.header__ul li a {
+	color: #fff !important;
+	transition: all 0.2s ease-in-out;
+}
+
+.dropdown-item:hover {
+	background-color: #464a4c;
+}
+
+.bg-sambemi {
+    background-color: #666666;
+}
+
+.navbar-white {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* 최대 너비 400픽셀일 때 아래 속성 적용  */
+@media (max-width: 400px) {
+  .navbar a, .header__button, button.navbar-white {
+    font-size: .7rem;
+  }
+}
+
+.fa-bolt,
+.fa-bars {
+  color: #fff;
+}
+
+
+/* 피드백 & 도움말 */
+.btn__feedback {
+  background-color: #FFFFFF;
+}
+
+.btn__feedback:focus {
+  background-color: #FFFFFF;
+  outline: none;
+  border: none;
+}
+
+.btn__help {
+  background-color: #FFFFFF;
+}
+
+.btn__help:focus {
+  background-color: #FFFFFF;
+  outline: none;
+  border: none;
+}
+
+.icon-section {
+  background-color: #FFFFFF;
+}
+
+
+/* 환경 설정 메뉴 탭 */
+.setting__title {
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 400px) { /* 최대 너비 400픽셀 이하일 때 아래 속성 적용 */
+  .setting__menu {
+    font-size: .7rem;
+  }
+}
+
+
+/* 꾸미기 설정 */
+.fa.fa-circle {
+  font-size: 0.8rem; /* 회원 가입 타이틀 앞의 점의 굵기를 0.8rem으로 설정 */
+}
+
+@media (max-width: 400px) { /* 최대 너비 400픽셀 이하일 때 아래 속성 적용 */
+  .container {
+    font-size: .7rem;
+  }
+  .icon-section {
+    font-size: 1.5rem;
+  }
+  .form-label {
+    padding-top: 12.25px;
+  }
+  .form-check-input {
+    width: 1rem !important;
+    height: 1rem !important;
+    margin-top: 12.25px;
+  }
+}
+
+.form-control:focus {
+  border-color: #666666; /* 입력창에 입력할 때 border 색상을 회색으로 설정 */
+}
+
+.form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.form-check-input:hover,
+.form-check-input:focus {
+  border: none;
+  outline: none;
+}
+
+.btn__save {
+  color: #FFFFFF;
+  background-color: #666666;
+  border-radius: 100px;
+}
+
+.btn__save:focus, {
+  border-color: #666666;
+  color: #666666;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+}
+
+.btn__save__a {
+  font-size: 1.3rem;
+}

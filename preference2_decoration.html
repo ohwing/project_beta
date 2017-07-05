@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourpin &ndash; 환경설정 - 회원 정보 수정</title>
+  <!-- fontawesome-icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <!-- your custom css -->
+  <link rel="stylesheet" href="assets/css/preference2_decoration.css">
+</head>
+<body>
+  <!-- Header -->
+  <!-- 네비바 -->
+  <header class="header fixed-top">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-sambemi">
+      <a class="navbar-brand navbar-white" href="#">PILOT</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">장근열 여행자님<span class="sr-only">(여행자님 어서오세요! 현재 계급은 파일럿 입니다!)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">여행중</a>
+        </li>
+      </ul>
+      <a class="nav-link navbar-white px-0 py-1 mr-3" href="#"><i class="fa fa-bolt text-white"></i></a>
+      <div class="dropdown">
+        <button class="header__button navbar-white px-0 py-1 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MENU <i class="fa fa-bars text-white"></i>
+        </button>
+        <div class="header__dropdown dropdown-menu mr-auto" aria-labelledby="dropdownMenuButton">
+          <ul class="header__ul text-right p-0 m-0">
+            <li><a class="dropdown-item" href="#">main</a></li>
+            <li><a class="dropdown-item" href="newspeed1.html">newspeed</a></li>
+            <li><a class="dropdown-item" href="group_page.html">tourship</a></li>
+            <li><a class="dropdown-item" href="preference0_reconfirm.html">set-up</a></li>
+            <li><a class="dropdown-item" href="#">logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- // 네비바 -->
+  <!-- // Header -->
+
+  <!-- 피드백 & 도움말 -->
+  <div class="icon d-flex flex-row-reverse mt-5">
+    <button type="button" class="btn__help mr-2 mr-md-4 mt-2" data-toggle="tooltip" data-placement="bottom" title="도움말">
+      <a class="icon-section fa fa-question fa-2x" href="#"></a>
+    </button>
+    <button type="button" class="btn__feedback mr-1 mr-md-3 mt-2" data-toggle="tooltip" data-placement="bottom" title="피드백">
+      <a class="icon-section fa fa-envelope fa-2x" href="#"></a>
+    </button>
+  </div>
+  <!-- // 피드백 & 도움말 -->
+
+  <!-- 환경 설정 메뉴 탭 -->
+  <div class="setting-menu container mb-2">
+    <h1 class="setting__title font-weight-bold mx-2 mx-md-3 mx-lg-4 px-2 px-md-3 px-lg-4">Set-up</h1>
+    <ul class="setting__tabs nav nav-tabs mx-2 mx-md-3 mx-lg-4 px-2 px-md-3 px-lg-4">
+      <li class="setting__menu">
+        <a class="nav-link" href="preference1_information_modification.html">회원 정보 수정</a>
+      </li>
+      <li class="setting__menu">
+        <a class="nav-link active font-weight-bold" href="preference2_decoration.html">꾸미기</a>
+      </li>
+      <li class="setting__menu">
+        <a class="nav-link" href="preferencen3_notification_&_security.html">알림 &middot; 보안</a>
+      </li>
+      <li class="setting__menu">
+        <a class="nav-link" href="preferencen4_withdrawl.html">회원 탈퇴</a>
+      </li>
+    </ul>
+  </div>
+  <!-- // 환경 설정 메뉴 탭 -->
+
+  <!-- 꾸미기 설정 -->
+  <div class="container mt-5">
+    <form class="form-group mx-sm-3 mx-md-5 px-sm-3 px-md-5">
+      <div class="pin form-group row mx-3 mx-lg-5 px-lg-5">
+        <p class="setting-title">
+          <i class="fa fa-caret-right fa-2x mr-3"></i>
+          <strong class="h3">PIN</strong>
+        </p>
+      </div>
+      <div class="pin_shape form-group row mx-2 mx-lg-5 px-lg-5">
+        <label for="pin_shape_select" class="form-label font-weight-bold mx-5 px-3 pt-sm-2"><i class="fa fa-circle mr-3"></i>핀 모양 설정</label>
+        <select class="form-control col-2" id="pin_shape_select">
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+        </select>
+      </div>
+      <div class="pin_color form-group row mx-2 mx-lg-5 px-lg-5">
+        <label for="pin_color_select" class="form-label font-weight-bold mx-5 px-3 pt-sm-2"><i class="fa fa-circle mr-3"></i>핀 색상 설정</label>
+        <select class="form-control col-2" id="pin_color_select">
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+        </select>
+      </div>
+      <div class="page form-group row mx-3 mx-lg-5 px-lg-5">
+        <p class="setting-title">
+          <i class="fa fa-caret-right fa-2x mr-3"></i>
+          <strong class="h3">PAGE</strong>
+        </p>
+      </div>
+      <div class="background_color form-group row mx-2 mx-lg-5 px-lg-5">
+        <label for="background_color_select" class="form-label font-weight-bold col-5 col-lg-4 col-xl-3 mx-5 px-3 pt-sm-2"><i class="fa fa-circle mr-3"></i>배경 색상 설정</label>
+        <select class="form-control col-2" id="background_color_select">
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+        </select>
+      </div>
+      <div class="map_color form-group row mx-2 mx-lg-5 px-lg-5">
+        <label for="map_color_select" class="form-label font-weight-bold col-5 col-lg-4 col-xl-3 mx-5 px-3 pt-sm-2"><i class="fa fa-circle mr-3"></i>지도 색상 설정</label>
+        <select class="form-control col-2" id="map_color_select">
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+        </select>
+      </div>
+      <div class="contour_color form-group row mx-2 mx-lg-5 px-lg-5">
+        <label for="contour_color_select" class="form-label font-weight-bold col-5 col-lg-4 col-xl-3 mx-5 px-3 pt-sm-2"><i class="fa fa-circle mr-3"></i>구분선 색상 설정</label>
+        <select class="form-control col-2" id="contour_color_select">
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+        </select>
+      </div>
+      <div class="form-group row mx-2 mx-lg-5 px-lg-5">
+        <label for="theme_check" class="form-label font-weight-bold mx-5 px-3 pt-sm-1"><i class="fa fa-circle mr-3"></i>테마 설정</label>
+        <div class="theme_checkbox">
+          <input type="checkbox" class="form-check-input" id="theme_check">
+        </div>
+      </div>
+      <div class="d-flex flex-row-reverse pr-sm-1 mr-sm-1">
+        <button type="button" class="btn__save py-2 mr-sm-5">
+          <a class="font-weight-bold btn__save__a px-3" href="#">
+            SAVE
+          </a>
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- // 꾸미기 설정 -->
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>

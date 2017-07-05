@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>그룹페이지 생성</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/group_page.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-sambemi">
+            <a class="navbar-brand navbar-white" href="#">PILOT</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">오제웅 여행자님<span class="sr-only">(여행자님 어서오세요! 현재 계급은 파일럿 입니다!)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">여행중</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">휴식중</a>
+                </li>
+            </ul>
+            <a class="nav-link navbar-white px-0 py-1 mr-3" href="#"><i class="fa fa-bolt"></i></a>
+            <div class="dropdown">
+                <button class="header__button navbar-white px-0 py-lg-0 py-md-1 py-sm-0 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MENU <i class="fa fa-bars"></i>
+                </button>
+                <div class="header__dropdown dropdown-menu mr-auto" aria-labelledby="dropdownMenuButton">
+                    <ul class="header__ul text-right p-0 m-0">
+                        <li><a class="dropdown-item" href="#">main</a></li>
+                        <li><a class="dropdown-item" href="newspeed1.html">newspeed</a></li>
+                        <li><a class="dropdown-item" href="group_page.html">tourship</a></li>
+                        <li><a class="dropdown-item" href="preference0_reconfirm.html">set-up</a></li>
+                        <li><a class="dropdown-item" href="#">logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- //Header -->
+    <!-- Main -->
+    <main id="main" class="container mt-5">
+        <form class="pt-5">
+            <div class="form-group">
+                <label for="group_name">그룹 이름</label>
+                <input type="text" class="form-control" id="group_name" aria-describedby="emailHelp" placeholder="그룹 이름을 입력해주세요">
+            </div>
+
+            <div class="form-group">
+                <label for="group__introduce">그룹 소개</label>
+                <textarea class="form-control" id="group__introduce" rows="5" placeholder="그룹을 소개해 주세요"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">제출하기</button>
+        </form>
+    </main>
+    <!-- //Main -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+
+</html>

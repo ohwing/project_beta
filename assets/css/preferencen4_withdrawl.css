@@ -1,0 +1,255 @@
+/* Common Settings */
+html {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+* {
+  color: #666666;
+}
+
+button {
+  border: none;
+  cursor: pointer; /* 버튼에 커서를 올리면 손가락모양으로 바뀐다. */
+}
+
+button:focus {
+  outline: none; /* 버튼에 커서를 클릭하면 바깥줄에 아무것도 적용하지 않는다. */
+  border: none;
+}
+
+a {
+  color: inherit; /* 상위 선택자 *로부터 색 상속 */
+}
+
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn:focus, .btn:active {
+	box-shadow: none;
+}
+
+.bg-faded {
+  background-color: #666666 !important; /* bg-faded 클래스를 적용하면 배경색상을 회색으로 설정 */
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+/* header */
+/* navbar 통일안 */
+.header__button {
+    background-color: inherit;
+}
+
+.navbar-nav, .navbar {
+    flex-direction: row;
+}
+
+.dropdown-menu {
+    right: 0;
+    left: inherit;
+}
+
+.dropdown-item {
+    font-size: 1.1rem;
+}
+
+.header__dropdown {
+	border: 0;
+	background-color: #666666;
+}
+
+.header__ul {
+	list-style-type: none;
+}
+
+.header__ul li a {
+	color: #fff !important;
+	transition: all 0.2s ease-in-out;
+}
+
+.dropdown-item:hover {
+	background-color: #464a4c;
+}
+
+.bg-sambemi {
+    background-color: #666666;
+}
+
+.navbar-white {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* 최대 너비 400픽셀일 때 아래 속성 적용  */
+@media (max-width: 400px) {
+  .navbar a, .header__button, button.navbar-white {
+    font-size: .7rem;
+  }
+}
+
+.fa-bolt,
+.fa-bars {
+  color: #fff;
+}
+
+
+/* 피드백 & 도움말 */
+.btn__feedback {
+  background-color: #FFFFFF;
+}
+
+.btn__feedback:focus {
+  background-color: #FFFFFF;
+  outline: none;
+  border: none;
+}
+
+.btn__help {
+  background-color: #FFFFFF;
+}
+
+.btn__help:focus {
+  background-color: #FFFFFF;
+  outline: none;
+  border: none;
+}
+
+.icon-section {
+  background-color: #FFFFFF;
+}
+
+
+/* 환경설정 메뉴 탭 */
+.setting__title {
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 400px) { /* 최대 너비 400픽셀 이하일 때 아래 속성 적용 */
+  .setting__menu {
+    font-size: .7rem;
+  }
+}
+
+/* 회원 탈퇴 */
+/* 최대 너비 400픽셀일 때 아래 속성 적용  */
+@media (max-width: 400px) {
+  .withdrawl {
+    font-size: 1.06rem !important;
+  }
+  .text_zero {
+    font-size: 2.14rem !important;
+  }
+  .text_first {
+    font-size: 1.96rem !important;
+  }
+  .text_second {
+    font-size: 0.88rem !important;
+  }
+  .text_third {
+    font-size: 0.8rem !important;
+  }
+  .text_fourth {
+    font-size: 0.62rem !important;
+  }
+}
+
+
+@media screen and (min-width: 401px) and (max-width: 576px) {
+  .withdrawl {
+    font-size: 1.33rem !important;
+  }
+  .text_zero {
+    font-size: 2.67rem !important;
+  }
+  .text_first {
+    font-size: 2.44rem !important;
+  }
+  .text_second {
+    font-size: 1.11rem !important;
+  }
+  .text_third {
+    font-size: 1rem !important;
+  }
+  .text_fourth {
+    font-size: 0.78rem !important;
+  }
+}
+
+.withdrawl {
+  font-size: 1.6rem;
+  color: #000000;
+}
+
+.text_zero {
+  font-size: 3.2rem;
+  color: inherit;
+}
+
+.text_first {
+  font-size: 2.93rem;
+  color: inherit;
+  text-shadow: 2px 1px 6px #666666;
+}
+
+.text_second {
+  font-size: 1.33rem;
+  color: inherit;
+}
+
+.text_third {
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+.text_fourth {
+  font-size: 0.93rem;
+  color: #666666;
+}
+
+.btn__yes {
+  color: #FFFFFF;
+  background-color: #666666;
+  border-radius: 100px;
+  padding: 0 31px 0 31px;
+}
+
+.btn__yes:hover {
+  color: #666666;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+  border-color: #666666;
+  border: 1px solid;
+}
+
+.btn__yes__a {
+  font-size: 1.3rem;
+}
+
+.btn__cancel {
+  color: #FFFFFF;
+  background-color: #666666;
+  border-radius: 100px;
+  padding: 0 10px 0 10px;
+}
+
+.btn__cancel:hover {
+  color: #666666;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+  border-color: #666666;
+  border: 1px solid;
+}
+
+.btn__cancel__a {
+  font-size: 1.3rem;
+}
