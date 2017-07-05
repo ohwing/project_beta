@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title lang="ko">로그인후 메인화면</title>
+  <!-- fonts -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <!-- your custom css -->
+  <link rel="stylesheet" href="assets/css/after_login_main.css">
+</head>
+<body>
+  <!-- 네비바 -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-sambemi">
+            <a class="navbar-brand navbar-white" href="#">PILOT</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">오제웅 여행자님<span class="sr-only">(여행자님 어서오세요! 현재 계급은 파일럿 입니다!)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">여행중</a>
+                </li>
+            </ul>
+            <a class="nav-link navbar-white px-0 py-1 mr-3" href="#"><i class="fa fa-bolt"></i></a>
+            <div class="dropdown">
+                <button class="header__button navbar-white px-0 py-lg-0 py-md-1 py-sm-0 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MENU <i class="fa fa-bars"></i>
+                </button>
+                <div class="dropdown-menu nav-m mr-auto" aria-labelledby="dropdownMenuButton">
+                    <ul class="py-0">
+                        <li><a class="dropdown-item" href="after_login_main.html">main</a></li>
+                        <li><a class="dropdown-item" href="newspeed1.html">newspeed</a></li>
+                        <li><a class="dropdown-item" href="group_page.html">tourship</a></li>
+                        <li><a class="dropdown-item" href="preference0_reconfirm.html">set-up</a></li>
+                        <li><a class="dropdown-item" href="before_login_main.html">logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- // 네비바 -->
+
+  <!-- main -->
+
+  <main class="main mt-5">
+      <div class="pt-3">
+        <h1 class="logo ml-4">TourPin</h1>
+      </div>
+      <h5 class="total mt-5 pl-2 ml-4">Total number of travelers</h5>
+      <h5 class="mini_total ml-5 pl-2">Korea</h5>
+      <h5 class="total mt-3 pl-2 ml-4">The most area</h5>
+      <h5 class="mini_total ml-5 pl-2">553</h5>
+      <a class="fa fa-map-marker fa-3x ml-5 pl-5" data-toggle="modal" data-target=".click_mypin" href=".click_mypin"></a>
+  </main>
+
+  <!-- // main -->
+
+  <!-- footer 아이콘들 놓기-->
+    <div class="icon">
+      <div class="d-flex justify-content-end fixed-bottom">
+        <div class="mr-auto p-2">
+          <a class="fa fa-compass icons fa-3x ml-3" href="#"></a>
+        </div>
+        <div class="p-2">
+          <a class="fa fa-plus-circle icons fa-3x" data-toggle="modal" data-target="#add_memory" href="#add_memory"></a>
+          <a class="fa fa-minus-circle icons fa-3x" data-toggle="modal" data-target="#del_memory" href="#del_memory"></a>
+          <a class="fa fa-search-plus icons fa-3x" href="#"></a>
+          <div class="btn-group dropup pb-3">
+            <a class="fa fa-share-alt icons fa-3x" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </a>
+            <div class="dropdown-menu mr-3 pl-1">
+              <ul class="pl-0">
+                <li><a href="#" class="twitter_l fa fa-twitter-square fa-3x"></a></li>
+                <li><a href="#" class="fa fa-facebook-square fa-3x"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- // footer -->
+
+  <!--플러스아이콘 눌렀을시 : 추억더하기 modal-->
+<form>
+  <div class="modal fade" id="add_memory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">추억 추가</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group row mb-0">
+            <label for="example-date-input" class="col-3 col-form-label pr-0">여행지역</label>
+            <div class="form-group mr-2">
+              <select class="form-control" id="exampleSelect1">
+                <option disabled selected="selected" class="bg-faded">나라</option>
+                <option>한국</option>
+                <option>일본</option>
+                <option>미국</option>
+                <option>중국</option>
+              </select>
+            </div>
+            <div class="form-group mr-2">
+              <select class="form-control" id="exampleSelect1">
+                <option disabled selected="selected" class="bg-faded">지역</option>
+                <option>서울</option>
+                <option>대구</option>
+                <option>부산</option>
+                <option>원주</option>
+              </select>
+            </div>
+            <div class="form-group row">
+              <div class="col-10">
+                <input class="form-control px-0" placeholder="상세 주소" id="example-text-input">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-date-input" class="col-3 col-form-label pr-0">여행날짜</label>
+            <div class="col-8 pl-0">
+              <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+            </div>
+          </div>
+          <div class="memory_icon">
+            <a class="fa fa-smile-o fa-2x" href="#"></a>
+            <a class="fa fa-plus fa-2x" href="#"></a>
+            <input type="file" name="">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          </div>
+          <div class="form-group row mb-0">
+            <label for="example-date-input" class="col-3 col-form-label pr-0">공개설정</label>
+            <div class="form-group mr-2">
+              <select class="form-control" id="exampleSelect1">
+                <option disabled selected="selected" class="bg-faded">설정</option>
+                <option>전체공개</option>
+                <option>친구공개</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row mb-0">
+            <label for="example-date-input" class="col-3 col-form-label pr-0">여행자그룹</label>
+            <div class="form-group mr-2">
+              <select class="form-control" id="exampleSelect1">
+                <option>안함</option>
+                <option>자전거그룹</option>
+                <option>도보그룹</option>
+              </select>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="upload_bt">Upload</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+<!--마이너스 아이콘 눌렀을 시 : 추억삭제 modal-->
+
+  <div class="modal fade" id="del_memory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">추억 삭제</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group row mb-0">
+            <label for="example-date-input" class="col-3 col-form-label pr-0">여행지역</label>
+            <div class="form-group mr-2">
+              <select class="form-control" id="exampleSelect1">
+                <option disabled selected="selected" class="bg-faded">나라</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group mr-2">
+              <select class="form-control" id="exampleSelect1">
+                <option disabled selected="selected" class="bg-faded">지역</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+          <div class="list">
+            <h5>목록</h5>
+            <ul class="list pl-0" data-toggle="buttons">
+              <li class="list_ck btn btn-primary mb-1">
+                 <input type="checkbox" autocomplete="off"> 추억1
+              </li>
+              <li class="list_ck btn btn-primary mb-1">
+                <input type="checkbox" autocomplete="off"> 추억2
+              </li>
+              <li class="list_ck btn btn-primary mb-1">
+                <input type="checkbox" autocomplete="off"> 추억3
+              </li>
+              <li class="list_ck btn btn-primary mb-1">
+                 <input type="checkbox" autocomplete="off"> 추억1
+              </li>
+              <li class="list_ck btn btn-primary mb-1">
+                 <input type="checkbox" autocomplete="off"> 추억1
+              </li>
+              <li class="list_ck btn btn-primary mb-1">
+                 <input type="checkbox" autocomplete="off"> 추억1
+              </li>
+              <li class="list_ck btn btn-primary mb-1">
+                 <input type="checkbox" autocomplete="off"> 추억1
+              </li>
+              <li class="list_ck btn btn-primary mb-1">
+                 <input type="checkbox" autocomplete="off"> 추억1
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="del_bt fa fa-trash-o fa-2x"></button>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!--내핀 클릭시 내용보기 및 수정-->
+  <div class="modal fade click_mypin" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="d-block left col-6">
+                  <div class="form-group row">
+                    <label for="input-area" class="col-2 col-form-label">지역</label>
+                    <div class="col-10">
+                      <input disabled class="form-control" type="text" value="강원도 원주시 우산동" id="example-text-input">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="input-date" class="col-2 col-form-label ">날짜</label>
+                    <div class="col-10">
+                      <input disabled class="form-control" type="text" value="2017.7.5" id="example-text-input">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <textarea disabled class="form-control textarea" id="exampleTextarea" placeholder="오늘은 부리도를 먹었다. 역시 도스마스의 부리또가 제일 맛있다. 모짜렐라부리또 짱!" rows="3"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <ul class="list-group">
+                      <li class="list-group-item">부럽다!</li>
+                      <li class="list-group-item">나도먹고싶다!</li>
+                      <li class="list-group-item">윽 부리또</li>
+                      <li class="list-group-item">그만먹어!~!</li>
+                    </ul>
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination justify-content-center mt-3">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <form>
+                    <div class="form-group row ">
+                      <div class="col-9">
+                        <input class="form-control text" type="text" placeholder="댓글" id="example-text-input">
+                      </div>
+                      <button class="btn btn-primary ml-3 text_bt" type="submit">입력</button>
+                    </div>
+                  </form>
+                  <div class="d-flex flex-row">
+                    <div class="p-2">
+                      <a href="#" class="fa  fa-pencil fa-2x icons"></a>
+                    </div>
+                    <div class="p-2">
+                      <div class="btn-group dropup pb-3">
+                        <a class="fa fa-share-alt icons fa-2x" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </a>
+                        <div class="dropdown-menu mr-3 pl-1">
+                          <ul class="pl-0">
+                            <li><a href="#" class="twitter_l fa fa-twitter-square fa-3x"></a></li>
+                            <li><a href="#" class="fa fa-facebook-square fa-3x"></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-2">
+                       <a class="fa fa-trash-o fa-2x icons" href="#"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="right col-6">
+                  <div class="card">
+                    <img class="card-img-top" src="assets/img/JY.jpg" alt="Card image cap">
+                    <div class="card-block">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="d-block left col-6">
+                  <div class="form-group row">
+                    <label for="input-area" class="col-2 col-form-label">지역</label>
+                    <div class="col-10">
+                      <input disabled class="form-control" type="text" value="강원도 원주시 우산동" id="example-text-input">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="input-date" class="col-2 col-form-label ">날짜</label>
+                    <div class="col-10">
+                      <input disabled class="form-control" type="text" value="2017.7.5" id="example-text-input">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <textarea disabled class="form-control textarea" id="exampleTextarea" placeholder="오늘은 부리도를 먹었다. 역시 도스마스의 부리또가 제일 맛있다. 모짜렐라부리또 짱!" rows="3"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <ul class="list-group">
+                      <li class="list-group-item">부럽다!</li>
+                      <li class="list-group-item">나도먹고싶다!</li>
+                      <li class="list-group-item">윽 부리또</li>
+                      <li class="list-group-item">그만먹어!~!</li>
+                    </ul>
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination justify-content-center mt-3">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <form>
+                    <div class="form-group row ">
+                      <div class="col-9">
+                        <input class="form-control text" type="text" placeholder="댓글" id="example-text-input">
+                      </div>
+                      <button class="btn btn-primary ml-3 text_bt" type="submit">입력</button>
+                    </div>
+                  </form>
+                  <div class="d-flex flex-row">
+                    <div class="p-2">
+                      <a href="#" class="fa  fa-pencil fa-2x icons"></a>
+                    </div>
+                    <div class="p-2">
+                      <div class="btn-group dropup pb-3">
+                        <a class="fa fa-share-alt icons fa-2x" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </a>
+                        <div class="dropdown-menu mr-3 pl-1">
+                          <ul class="pl-0">
+                            <li><a href="#" class="twitter_l fa fa-twitter-square fa-3x"></a></li>
+                            <li><a href="#" class="fa fa-facebook-square fa-3x"></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-2">
+                       <a class="fa fa-trash-o fa-2x icons" href="#"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="right col-6">
+                  <div class="card">
+                    <img class="card-img-top" src="assets/img/JY.jpg" alt="Card image cap">
+                    <div class="card-block">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                   <div class="d-block left col-6">
+                  <div class="form-group row">
+                    <label for="input-area" class="col-2 col-form-label">지역</label>
+                    <div class="col-10">
+                      <input disabled class="form-control" type="text" value="강원도 원주시 우산동" id="example-text-input">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="input-date" class="col-2 col-form-label ">날짜</label>
+                    <div class="col-10">
+                      <input disabled class="form-control" type="text" value="2017.7.5" id="example-text-input">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <textarea disabled class="form-control textarea" id="exampleTextarea" placeholder="오늘은 부리도를 먹었다. 역시 도스마스의 부리또가 제일 맛있다. 모짜렐라부리또 짱!" rows="3"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <ul class="list-group">
+                      <li class="list-group-item">부럽다!</li>
+                      <li class="list-group-item">나도먹고싶다!</li>
+                      <li class="list-group-item">윽 부리또</li>
+                      <li class="list-group-item">그만먹어!~!</li>
+                    </ul>
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination justify-content-center mt-3">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <form>
+                    <div class="form-group row ">
+                      <div class="col-9">
+                        <input class="form-control text" type="text" placeholder="댓글" id="example-text-input">
+                      </div>
+                      <button class="btn btn-primary ml-3 text_bt" type="submit">입력</button>
+                    </div>
+                  </form>
+                  <div class="d-flex flex-row">
+                    <div class="p-2">
+                      <a href="#" class="fa  fa-pencil fa-2x icons"></a>
+                    </div>
+                    <div class="p-2">
+                      <div class="btn-group dropup pb-3">
+                        <a class="fa fa-share-alt icons fa-2x" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </a>
+                        <div class="dropdown-menu mr-3 pl-1">
+                          <ul class="pl-0">
+                            <li><a href="#" class="twitter_l fa fa-twitter-square fa-3x"></a></li>
+                            <li><a href="#" class="fa fa-facebook-square fa-3x"></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-2">
+                       <a class="fa fa-trash-o fa-2x icons" href="#"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="right col-6">
+                  <div class="card">
+                    <img class="card-img-top" src="assets/img/JY.jpg" alt="Card image cap">
+                    <div class="card-block">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"   integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</body>
+</html>

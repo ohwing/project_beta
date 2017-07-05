@@ -1,0 +1,84 @@
+
+body {
+	background-color: #EBEFF1;
+}/*원래는 배경색상 X 글씨가 흰색이어서 안보일까봐 설정*/
+
+
+button {
+	cursor: pointer;/*버튼 위에 올렸을때 커서모양이 바뀐다.*/
+}
+
+button:focus , button:hover{
+	background-color: #3C74AA;
+	color: #FFF;
+	outline: none;
+}/*버튼을 눌렀을 시(:focus) 생기는 테두리를 없앤다 outline : 테두리*/
+
+
+/*네비 통일 부분*/
+
+.header__button {
+	border : 0;
+    background-color: inherit;
+}
+
+.navbar-nav, .navbar {
+    height: 48px;
+    flex-direction: row;
+}
+
+.nav-link {
+	color: #3C74AA !important;
+	font-weight: 700;
+    font-size: 1.333333rem;
+}
+
+
+.bg-sambemi {
+    background-color: #666666;
+    /*background-color: #d6cbac;*/
+}
+
+.navbar-white {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@media (max-width: 400px) {
+    .navbar a, .header__button, button.navbar-white {
+        font-size: .7rem;
+    }
+}
+/*//네비 통일 부분*/
+/*s
+
+/*main*/
+
+.container {
+	width: 500px;
+}
+
+.logo {/*로그인창 가운데 로고 설정*/
+	text-align: center;
+	font-weight: 700;
+	font-size: 60px;
+	color: #3C74AA;
+}
+
+.login {
+	color: #ccc;
+	font-weight: 700;
+}
+
+.bt {
+	margin-left: 180px;
+	width: 120px;
+	height: 50px;
+	color: #3C74AA;
+	font-size: 1rem;
+	font-weight: 700;
+	background-color: #EBEFF1;
+	border : 1px solid #3C74AA;
+	border-radius: 100px;
+}/*Login 버튼*/
