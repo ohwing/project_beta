@@ -69,24 +69,9 @@ button.btn:focus {
 /*
 
 /*main*/
-.main {
-	height: 100vh;
-    background-image: url(../img/map.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.logo {
-    font-size: 3rem;
-    color: #3C74AA;
-    font-weight: 900;
-}
-
-@media (max-width: 417px) {
-    .logo {
-        font-size: 2rem;
-    }
+.basic_map {
+    z-index:8;
+    position: relative;
 }
 
 .total {

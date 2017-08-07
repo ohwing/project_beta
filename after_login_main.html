@@ -20,8 +20,9 @@
                 <li class="nav-item active">
                     <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">오제웅 여행자님<span class="sr-only">(여행자님 어서오세요! 현재 계급은 파일럿 입니다!)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">여행중</a>
+                <li class="nav-item py-1">
+                    <a class="nav-link navbar-white px-0  mr-3 travel" href="#">여행중</a>
+                    <a class="nav-link navbar-white px-0  mr-3 break" href="#">휴식중</a>
                 </li>
             </ul>
             <a class="nav-link navbar-white px-0 py-1 mr-3" href="#"><i class="fa fa-bolt"></i></a>
@@ -45,16 +46,60 @@
 
   <!-- main -->
 
-  <main class="main mt-5">
-      <div class="pt-3">
-        <h1 class="logo ml-4">TourPin</h1>
+  <main class="main mt-5" >
+      <div class="pt-3 main__content">
+        <h1 class="logo ml-4">
+          <img src="/assets/img/logo3.png" style="width: 20%;"></img>
+        </h1>
       </div>
-      <h5 class="total mt-5 pl-2 ml-4">Total number of travelers</h5>
-      <h5 class="mini_total ml-5 pl-2">Korea</h5>
-      <h5 class="total mt-3 pl-2 ml-4">The most area</h5>
-      <h5 class="mini_total ml-5 pl-2">553</h5>
-      <a class="fa fa-map-marker fa-3x ml-5 pl-5" data-toggle="modal" data-target=".click_mypin" href=".click_mypin"></a>
-  </main>
+      <div class="map_wrap">
+        <div id="after_login__map" style="width:100%;height:85vh;">
+          <div id="category_wrap">
+            <ul id="category">
+              <li id="BK9" data-order="0"> 
+                  <span class="category_bg bank"></span>
+                  은행
+              </li>       
+              <li id="MT1" data-order="1"> 
+                  <span class="category_bg mart"></span>
+                  마트
+              </li>  
+              <li id="PM9" data-order="2"> 
+                  <span class="category_bg pharmacy"></span>
+                  약국
+              </li>  
+              <li id="OL7" data-order="3"> 
+                  <span class="category_bg oil"></span>
+                  주유소
+              </li>  
+              <li id="CE7" data-order="4"> 
+                  <span class="category_bg cafe"></span>
+                  카페
+              </li>  
+              <li id="CS2" data-order="5"> 
+                  <span class="category_bg store"></span>
+                  편의점
+              </li>      
+            </ul>
+          </div>
+        </div>
+        
+        <div id="menu_wrap" class="bg_white ml-2">
+          <div class="option">
+            <div>
+              <form onsubmit="searchPlaces(); return false;">
+                키워드 : <input type="text" value="" id="keyword" size="15">
+                <button type="submit">검색</button> 
+              </form>
+            </div>
+          </div>
+          <hr>
+          <ul id="placesList"></ul>
+          <div id="pagination"></div>
+        </div>
+        <!--<p id="result2"></p>-->
+      </div>
+    </main>
 
   <!-- // main -->
 
@@ -62,19 +107,33 @@
     <div class="icon">
       <div class="d-flex justify-content-end fixed-bottom">
         <div class="mr-auto p-2">
-          <a class="fa fa-compass icons fa-3x ml-3" href="#"></a>
+          <!--<button type="button" class="fa fa-search-plus icons fa-3x"></button>-->
+          <button type="button" class="fa fa-search icons fa-3x main__btn__search ml-2 mr-0"></button>
+          <button type="button" class="fa fa-compass icons fa-3x ml-3 main__btn"></button>
         </div>
         <div class="p-2">
-          <a class="fa fa-plus-circle icons fa-3x" data-toggle="modal" data-target="#add_memory" href="#add_memory"></a>
-          <a class="fa fa-minus-circle icons fa-3x" data-toggle="modal" data-target="#del_memory" href="#del_memory"></a>
-          <a class="fa fa-search-plus icons fa-3x" href="#"></a>
-          <div class="btn-group dropup pb-3">
-            <a class="fa fa-share-alt icons fa-3x" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="sr-only">Toggle Dropdown</span>
-            </a>
+          <div class="btn-group dropup">
+            <button class="fa fa-map-marker icons fa-3x main__btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
             <div class="dropdown-menu mr-3 pl-1">
               <ul class="pl-0">
-                <li><a href="#" class="twitter_l fa fa-twitter-square fa-3x"></a></li>
+                <li><a href="#" id="markerMake">추가하기</a></li>
+                <li><a href="#" id="multiMake">다중추가</a></li>
+                <li><a href="#" id="registration">등록하기</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--<button type="button" id="markerMake" class="fa fa-map-marker icons fa-3x main__btn"></button>-->
+          <button type="button" class="fa fa-minus-circle icons fa-3x main__btn" data-toggle="modal" data-target="#del_memory" href="#del_memory"></button>
+          
+          <div class="btn-group dropup">
+            <button type="button" class="fa fa-share-alt icons fa-3x main__btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu share-menu mr-3 pl-1">
+              <ul class="pl-0">
+                <li><a href="#" class="twitter_l fa fa-twitter-square fa-3x "></a></li>
                 <li><a href="#" class="fa fa-facebook-square fa-3x"></a></li>
               </ul>
             </div>
@@ -84,8 +143,7 @@
     </div>
   <!-- // footer -->
 
-  <!--플러스아이콘 눌렀을시 : 추억더하기 modal-->
-<form>
+  <!--플러스아이콘 눌렀을시 : 추억 하나만 더하기 modal-->
   <div class="modal fade" id="add_memory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -96,49 +154,33 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="form-group row mb-0">
-            <label for="example-date-input" class="col-3 col-form-label pr-0">여행지역</label>
-            <div class="form-group mr-2">
-              <select class="form-control" id="exampleSelect1">
-                <option disabled selected="selected" class="bg-faded">나라</option>
-                <option>한국</option>
-                <option>일본</option>
-                <option>미국</option>
-                <option>중국</option>
-              </select>
-            </div>
-            <div class="form-group mr-2">
-              <select class="form-control" id="exampleSelect1">
-                <option disabled selected="selected" class="bg-faded">지역</option>
-                <option>서울</option>
-                <option>대구</option>
-                <option>부산</option>
-                <option>원주</option>
-              </select>
-            </div>
-            <div class="form-group row">
-              <div class="col-10">
-                <input class="form-control px-0" placeholder="상세 주소" id="example-text-input">
-              </div>
+          <div class="form-group row">
+            <label for="form__address" class="col-3 col-form-label pr-0">주소</label>
+            <div class="col-9 pl-0">
+              <input class="form-control" placeholder="상세 주소" id="form__address">
             </div>
           </div>
           <div class="form-group row">
             <label for="example-date-input" class="col-3 col-form-label pr-0">여행날짜</label>
-            <div class="col-8 pl-0">
+            <div class="col-9 pl-0">
               <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
             </div>
           </div>
           <div class="memory_icon">
             <a class="fa fa-smile-o fa-2x" href="#"></a>
-            <a class="fa fa-plus fa-2x" href="#"></a>
-            <input type="file" name="">
+            <label class="fa fa-plus fa-2x mb-2">
+              <input type="file" onchange="javascript:document.getElementById('file_route').value=this.value" >
+            </label>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" readonly="readonly" id="file_route" rows="3"></textarea>
           </div>
           <div class="form-group">
             <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
           </div>
           <div class="form-group row mb-0">
             <label for="example-date-input" class="col-3 col-form-label pr-0">공개설정</label>
-            <div class="form-group mr-2">
+            <div class="form-group mr-2 col-5">
               <select class="form-control" id="exampleSelect1">
                 <option disabled selected="selected" class="bg-faded">설정</option>
                 <option>전체공개</option>
@@ -148,7 +190,7 @@
           </div>
           <div class="form-group row mb-0">
             <label for="example-date-input" class="col-3 col-form-label pr-0">여행자그룹</label>
-            <div class="form-group mr-2">
+            <div class="form-group mr-2 col-5">
               <select class="form-control" id="exampleSelect1">
                 <option>안함</option>
                 <option>자전거그룹</option>
@@ -163,7 +205,57 @@
     </div>
   </div>
 </div>
-</form>
+
+<!--플러스아이콘 눌렀을시 : 추억 여러개 더하기 modal-->
+  <div class="modal fade" id="multiAddModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">추억 추가</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="multiModel-body" class="modal-body">
+           <div class="memory_icon" id="multigps">
+            <a class="fa fa-smile-o fa-2x" href="#"></a>
+            <label class="fa fa-plus fa-2x mb-2">
+              <input type="file" onchange="javascript:document.getElementById('file_route').value=this.value" >
+            </label>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" readonly="readonly" id="file_route" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          </div>
+          <div class="form-group row mb-0">
+            <label for="example-date-input" class="col-3 col-form-label pr-0">공개설정</label>
+            <div class="form-group mr-2 col-5">
+              <select class="form-control" id="exampleSelect1">
+                <option disabled selected="selected" class="bg-faded">설정</option>
+                <option>전체공개</option>
+                <option>친구공개</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row mb-0">
+            <label for="example-date-input" class="col-3 col-form-label pr-0">여행자그룹</label>
+            <div class="form-group mr-2 col-5">
+              <select class="form-control" id="exampleSelect1">
+                <option>안함</option>
+                <option>자전거그룹</option>
+                <option>도보그룹</option>
+              </select>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="upload_bt">Upload</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--마이너스 아이콘 눌렀을 시 : 추억삭제 modal-->
 
@@ -493,7 +585,8 @@
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- bootstrap -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=06220f2994a97769a8f7ba53ca9f39b8&libraries=services,clusterer"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"   integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
+    <script type="text/javascript" src="/assets/js/map_beta_main.js"></script>
 </body>
 </html>

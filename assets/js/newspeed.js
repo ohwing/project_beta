@@ -1,0 +1,10 @@
+$(document).ready(function(e){
+    $(".fa-heart-o").click(function(){
+    $(".fa-heart").toggle();
+    $(this).hide();
+  });
+    $(".fa-heart").click(function(){
+    $(".fa-heart-o").toggle();
+    $(this).hide();
+  });
+});

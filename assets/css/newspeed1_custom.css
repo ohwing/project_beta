@@ -147,6 +147,14 @@ a:hover, a:focus {
 
 .fa-heart-o {
 	color: #E78A97;
+	display: inline;
+	background-color: transparent;
+}
+
+.fa-heart {
+    color: #E78A97;
+    display: none;
+    background-color: transparent;
 }
 
 .fa-map-marker {

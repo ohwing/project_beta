@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/before_login_main.css">
 </head>
 <body>
-  <!-- 네비바 -->
+    <!-- 네비바 -->
     <header class="header fixed-top">
         <nav class="navbar navbar-toggleable-md navbar-light bg-sambemi">
             <ul class="navbar-nav mr-auto">
@@ -32,13 +32,15 @@
   <!-- main  아직은 만들어 지지 않았지만 지도가 들어올 것이다.-->
 
   <main class="main mt-5">
-      <div class="pt-3">
+    <div id="map" style="width:100%;height:100vh;">
+      <div class="basic_map pt-3">
         <h1 class="logo ml-4">TourPin</h1>
+        <h5 class="total mt-5 pl-2 ml-4">Total number of travelers</h5>
+        <h5 class="mini_total ml-5 pl-2">Korea</h5>
+        <h5 class="total mt-3 pl-2 ml-4">The most area</h5>
+        <h5 class="mini_total ml-5 pl-2">553</h5>
       </div>
-      <h5 class="total mt-5 pl-2 ml-4">Total number of travelers</h5>
-      <h5 class="mini_total ml-5 pl-2">Korea</h5>
-      <h5 class="total mt-3 pl-2 ml-4">The most area</h5>
-      <h5 class="mini_total ml-5 pl-2">553</h5>
+    </div>
   </main>
 
   <!-- // main -->
@@ -46,7 +48,8 @@
   <span class="icon fixed-bottom">
       <a class="fa fa-search-plus fa-3x" href="#"></a>
   </span>
-
+  
+  
 
 <!-- 로그인창 모달 -->
 <form>
@@ -84,5 +87,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"   integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- Daum 지도 API 라이브러리 불러오기 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=06220f2994a97769a8f7ba53ca9f39b8&libraries=services,clusterer"></script>
+  
+    <script type="text/javascript" src="assets/js/map_beta_before_main.js"></script>
 </body>
 </html>
