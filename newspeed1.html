@@ -48,16 +48,14 @@
     <!-- /Header -->
     <!-- Serch -->
     <article class="article fixed-top">
-        <div class="search navbar">
-            <button class="btn_search navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                <i class="fa fa-search fa-2x" aria-hidden="true"></i>
-            </button>
-            <div class="collapse submit mt-1" id="collapseExample">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
+        <div class="serch navbar">
+        <div id="sb-search" class="sb-search">
+        <form>
+            <input class="sb-search-input" placeholder="검색어를 입력하세요." type="text" value="" name="search" id="search">
+            <input class="sb-search-submit" type="submit" value="">
+            <span class="sb-icon-search"><i class="fa fa-search fa-2x" aria-hidden="true"></i></span>
+        </form>
+        </div>
         </div>
     </article>
     <!-- /Serch -->
@@ -66,14 +64,17 @@
         <div class="container pt-5 mt-5">
             <section class="posts pt-4">
                 <div class="btn-group d-flex row justify-content-end" role="group" aria-label="Basic example" data-toggle="bottons">
-                    <button type="button" class="btn btn-secondary">실시간 순</button>
-                    <button type="button" class="btn btn-secondary">좋아요 순</button>
                     <button type="button" class="btn btn-secondary"><a href=./newspeed2.html>실시간 타임라인 보기</a></button>
                 </div>
                 <ul class="row justify-content-center">
                     <li class="col-12 col-sm-6">
                         <div class="post pl-3 pt-1">
-                            <p class="post_user"><a href="#">'박기철</a> 여행자님'</p>
+                            <div class="d-flex flex-nowrap">
+                                <a href="#" class="card_profile d-flex justify-content-center align-items-center">
+                                    <img class="card-img-top height-fix" src="/assets/img/my.jpg" alt>
+                                </a>
+                                <p class="post_user mt-2 ml-2"><a href="#">'박기철</a> 여행자님'</p>
+                            </div>
                             <div class="d-flex flex-nowrap">
                                 <p class="post_upload">UPLOAD DATE</p>
                                 <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
@@ -82,8 +83,9 @@
                     </li>
                     <li class="col-12 col-sm-6">
                         <div class="icon pt-3 pr-3 row justify-content-end">
-                            <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2" aria-hidden="true"></button>
-                            <button type="button" class="fa fa-heart fa-2x px-2 pb-2" aria-hidden="true"></button>
+                            <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2 heart_o" aria-hidden="true"></button>
+                            <button type="button" class="fa fa-heart fa-2x px-2 pb-2 heart
+                            " aria-hidden="true"></button>
                             <i class="fa fa-map-marker fa-2x px-1" aria-hidden="true"></i>
                             <div class="dropdown">
                                 <button class="btn_option" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -374,6 +376,11 @@
     <!-- bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/assets/js/newspeed.js"></script>
+    <script type="text/javascript" src="/assets/js/classie.js"></script> 
+    <script type="text/javascript" src="/assets/js/uisearch.js"></script>
+    <script>
+        new UISearch( document.getElementById( 'sb-search' ) );
+    </script>
 </body>
 </html>
 
@@ -395,8 +402,8 @@
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 col-12">
                                     <div class="post pl-6">
-                                        <p class="post_user"><a href="#">'박기철</a> 여행자님'</p>
-                                        <div class="d-flex flex-nowrap">
+                                        <p class="post_user ml-2 pt-1"><a href="#">'박기철</a> 여행자님'</p>
+                                        <div class="d-flex flex-nowrap ml-2">
                                             <p class="post_upload">UPLOAD DATE</p>
                                             <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
                                         </div>

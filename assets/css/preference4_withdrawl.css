@@ -4,10 +4,6 @@ html {
   line-height: 1.6;
 }
 
-* {
-  color: #666666;
-}
-
 button {
   border: none;
   cursor: pointer; /* 버튼에 커서를 올리면 손가락모양으로 바뀐다. */
@@ -105,6 +101,7 @@ ul, ol {
 /* 피드백 & 도움말 */
 .btn__feedback {
   background-color: #FFFFFF;
+  color: #3D74AA;
 }
 
 .btn__feedback:focus {
@@ -115,6 +112,7 @@ ul, ol {
 
 .btn__help {
   background-color: #FFFFFF;
+  color: #3D74AA;
 }
 
 .btn__help:focus {
@@ -122,11 +120,6 @@ ul, ol {
   outline: none;
   border: none;
 }
-
-.icon-section {
-  background-color: #FFFFFF;
-}
-
 
 /* 환경설정 메뉴 탭 */
 .setting__title {
@@ -218,38 +211,32 @@ ul, ol {
 
 .btn__yes {
   color: #FFFFFF;
-  background-color: #666666;
+  background-color: #3D74AA;
   border-radius: 100px;
   padding: 0 31px 0 31px;
+  font-size: 1.3rem;
 }
 
 .btn__yes:hover {
-  color: #666666;
+  color: #3D74AA;
   background-color: #FFFFFF;
   border-radius: 100px;
-  border-color: #666666;
+  border-color: #3D74AA;
   border: 1px solid;
-}
-
-.btn__yes__a {
-  font-size: 1.3rem;
 }
 
 .btn__cancel {
   color: #FFFFFF;
-  background-color: #666666;
+  background-color: #3D74AA;
   border-radius: 100px;
   padding: 0 10px 0 10px;
+  font-size: 1.3rem;
 }
 
 .btn__cancel:hover {
-  color: #666666;
+  color: #3D74AA;
   background-color: #FFFFFF;
   border-radius: 100px;
-  border-color: #666666;
+  border-color: #3D74AA;
   border: 1px solid;
-}
-
-.btn__cancel__a {
-  font-size: 1.3rem;
 }

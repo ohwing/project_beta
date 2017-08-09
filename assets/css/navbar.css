@@ -1,0 +1,71 @@
+/* navbar 통일안 */
+.header__button {
+    background-color: inherit;
+}
+
+.navbar-nav, .navbar {
+    flex-direction: row;
+}
+
+.notice .dropdown-menu {
+  right: 0;
+  left: inherit;
+  background-color: #3D74AA;
+  border:none;
+}
+
+.notice .dropdown-item {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+}
+
+.notice .dropdown-item:hover {
+    font-size: 1.1rem;
+    font-weight:bold;
+    color: #3D74AA;
+}
+
+.notice li img{
+    width:80px;
+    height:80px;
+}
+
+.menu .dropdown-menu {
+  right: 0;
+  left: inherit;
+  background-color: #3D74AA;
+  border:none;
+}
+
+.menu .dropdown-item {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+}
+
+.menu .dropdown-item:hover {
+    font-size: 1.1rem;
+    font-weight:bold;
+    color: #3D74AA;
+}
+
+
+.bg-sambemi {
+    background-color: #3D74AA;
+}
+
+.navbar-white {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@media (max-width: 400px) {
+    .navbar a, .header__button, button.navbar-white {
+        font-size: .7rem;
+    }
+}
+
+.fa-bolt,
+.fa-bars {
+  color: #fff;
+}

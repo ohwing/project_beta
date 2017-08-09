@@ -77,7 +77,6 @@ a:focus {
   color: #fff;
 }
 
-
 /* Icon */
 .btn__feedback {
   background-color: #FFFFFF;
@@ -103,7 +102,6 @@ a:focus {
   background-color: #FFFFFF;
 }
 
-
 /* Setting Menu */
 .setting__title {
   color: #666666;
@@ -117,29 +115,41 @@ a:focus {
     }
 }
 
-
 /* Setting content */
+/* 로고 */
+.logo img {
+  max-width: 100%;
+  width:300px;
+}
+
+.logo p{
+  display:inline-block;
+}
+
+/* 최소 너비 528픽셀일 때 아래 속성 적용  */
+@media screen and (min-width: 528px) {
+  .logo p{
+    position: absolute;
+    display:inline-block;
+    top:94.2px;
+  }
+}
+
 .form-control:focus {
   border-color: #666666; /* 입력창에 입력할 때 border 색상을 회색으로 설정 */
 }
 
-#user_birthdate_year{
-
-}
-
+/* 회원 가입 버튼 */
 .btn__join_us {
   color: #FFFFFF;
-  background-color: #666666;
+  background-color: #3D74AA;
   border-radius: 100px;
 }
 
-.btn__join_us:focus, {
-  border-color: #666666;
-  color: #666666;
+.btn__join_us:hover,
+.btn__join_us:active {
+  border: 1px solid #3D74AA;
+  color: #3D74AA;
   background-color: #FFFFFF;
   border-radius: 100px;
-}
-
-.btn__join__a_us {
-  font-size: 1.3rem;
 }

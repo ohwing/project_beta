@@ -4,10 +4,6 @@ html {
   line-height: 1.6;
 }
 
-* {
-  color: #666666;
-}
-
 button {
   border: none;
   cursor: pointer; /* 버튼에 커서를 올리면 손가락모양으로 바뀐다. */
@@ -32,98 +28,34 @@ a:focus {
 	box-shadow: none;
 }
 
-.bg-faded {
-  background-color: #666666 !important; /* bg-faded 클래스를 적용하면 배경색상을 회색으로 설정 */
-}
-
 ul, ol {
   list-style-type: none;
   padding: 0;
 }
 
-
-/* header */
-/* navbar 통일안 */
-.header__button {
-    background-color: inherit;
-}
-
-.navbar-nav, .navbar {
-    flex-direction: row;
-}
-
-.dropdown-menu {
-    right: 0;
-    left: inherit;
-}
-
-.dropdown-item {
-    font-size: 1.1rem;
-}
-
-.header__dropdown {
-	border: 0;
-	background-color: #666666;
-}
-
-.header__ul {
-	list-style-type: none;
-}
-
-.header__ul li a {
-	color: #fff !important;
-	transition: all 0.2s ease-in-out;
-}
-
-.dropdown-item:hover {
-	background-color: #464a4c;
-}
-
-.bg-sambemi {
-    background-color: #666666;
-}
-
-.navbar-white {
-    color: #fff !important;
-    font-weight: 700;
-    font-size: 1rem;
-}
-
-@media (max-width: 400px) { /* 최대 너비 400픽셀일 때 아래 속성 적용  */
-  .navbar a, .header__button, button.navbar-white {
-    font-size: .7rem;
-  }
-}
-
-.fa-bolt,
-.fa-bars {
-  color: #fff;
-}
-
-
 /* 피드백 & 도움말 */
 .btn__feedback {
   background-color: #FFFFFF;
+  color: #3D74AA;
 }
 
 .btn__feedback:focus {
   background-color: #FFFFFF;
+  color: #3D74AA;
   outline: none;
   border: none;
 }
 
 .btn__help {
   background-color: #FFFFFF;
+  color: #3D74AA;
 }
 
 .btn__help:focus {
   background-color: #FFFFFF;
+  color: #3D74AA;
   outline: none;
   border: none;
-}
-
-.icon-section {
-  background-color: #FFFFFF;
 }
 
 
@@ -139,11 +71,7 @@ ul, ol {
   }
 }
 
-
 /* 환경 설정 전 비밀번호 재확인 */
-.fa.fa-circle {
-  font-size: 0.8rem; /* 회원 가입 타이틀 앞의 점의 굵기를 0.8rem으로 설정 */
-}
 
 @media (max-width: 400px) { /* 최대 너비 400픽셀 이하일 때 아래 속성 적용 */
   .container {
@@ -163,22 +91,21 @@ input[type="email"]:disabled {
 }
 
 .form-control:focus {
-  border-color: #666666; /* 입력창에 입력할 때 border 색상을 회색으로 설정 */
+  border-color: #3D74AA; /* 입력창에 입력할 때 border 색상을 회색으로 설정 */
 }
 
+/* enter 버튼 */
 .btn__enter {
   color: #FFFFFF;
-  background-color: #666666;
+  background-color: #3D74AA;
   border-radius: 100px;
+  font-size: 1.3rem;
 }
 
-.btn__enter:focus, {
-  border-color: #666666;
-  color: #666666;
+.btn__enter:hover,
+.btn__enter:active {
+  border: 1px solid #3D74AA;
+  color: #3D74AA;
   background-color: #FFFFFF;
   border-radius: 100px;
-}
-
-.btn__enter__a {
-  font-size: 1.3rem;
 }

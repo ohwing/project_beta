@@ -22,205 +22,114 @@
   <!-- // 네비바 -->
   <!-- // Header -->
 
-  <!-- 로고 -->
-  <div class="container mt-5 pt-5">
-    <div class="row ml-5 pl-5">
-      <img src="assets/img/logo.PNG" alt=Tourpin로고"">
-      <p class="h5 mt-5 pt-5">&#42; 는 필수 입력사항입니다.</p>
+  <!-- 회원 가입 -->
+  <div class="container pt-5 mt-5">
+    <!-- 로고 -->
+    <div class="logo ml-md-2 ml-lg-5">
+      <img src="assets/img/logo3.png" alt="Tourpin로고">
+      <p>&#42; 는 필수 입력사항입니다.</p>
     </div>
-  </div>
-  <!-- // 로고 -->
-
-  <!-- 회원 정보 수정 -->
-  <div class="container mt-5">
+    <!-- 가입 정보 입력 -->
     <form class="setting__content form-group">
-      <div class="id__setting form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
-        <label for="inputEmail3" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3"><i class="fa fa-circle mr-3"></i>ID(Email)</label>
+      <!-- ID(E-Mail) 입력 -->
+      <div class="id form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
+        <label for="inputEmail3" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3">&#42;&nbsp;&nbsp;ID(Email)</label>
         <div class="id__content col-12 col-sm-7 col-md-8">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="pilot@tourpin.com" disabled>
+          <input type="email" class="form-control" id="inputEmail3" placeholder="pilot@tourpin.com">
         </div>
       </div>
-      <div class="pw__setting form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
-        <label for="inputPassword3" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3"><i class="fa fa-circle mr-3"></i>PASSWORD</label>
+      <!-- 비밀번호 입력 -->
+      <div class="pw form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
+        <label for="inputPassword3" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3">&#42;&nbsp;&nbsp;PASSWORD</label>
         <div class="pw__content col-12 col-sm-7 col-md-8">
           <input type="password" class="form-control" id="inputPassword3" placeholder="&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;">
+          <small id="emailHelp" class="form-text text-muted">&#40; 영문&#43;숫자&#44; 8자 이상 &#41;</small>
         </div>
-        <small id="emailHelp" class="form-text text-muted ml-5">&#40;8자 이상&#44; 영문&#44; 숫자&#41;</small>
       </div>
-      <div class="re-enter_pw__setting form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
-        <label for="inputPassword3" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3"><i class="fa fa-circle mr-3"></i>PASSWORD 확인</label>
+      <!-- 비밀번호 재확인 -->
+      <div class="re-enter_pw form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
+        <label for="inputPassword3" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3">&#42;&nbsp;&nbsp;PASSWORD 확인</label>
         <div class="re-enter_pw__content col-12 col-sm-7 col-md-8">
           <input type="password" class="form-control" id="inputPassword3" placeholder="&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;">
         </div>
       </div>
-      <div class="name__setting form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
-        <label for="example-text-input" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3"><i class="fa fa-circle mr-3"></i>NAME</label>
+      <!-- 이름 입력 -->
+      <div class="name form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
+        <label for="example-text-input" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3">&#42;&nbsp;&nbsp;NAME</label>
         <div class="name__content col-12 col-sm-7 col-md-8">
-          <input class="form-control" type="text" placeholder="tourpin" id="example-text-input" disabled>
+          <input class="form-control" type="text" placeholder="tourpin" id="example-text-input">
         </div>
       </div>
-      <div class="address__setting form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
-        <label for="example-text-input" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3"><i class="fa fa-circle mr-3"></i>ADDRESS</label>
-        <div class="address__content col-12 col-sm-7 col-md-8">
-          <div class="cover__form">
-            <div class="row">
-              <form action="#" class="form-inline">
-                <label for="user_country" class="sr-only"></label>
-                <select class="form-control col-3 mb-2 mb-sm-0 ml-3 mr-2" id="user_country">
-                  <option disabled selected="selected" class="bg-faded text-white">나라</option>
-                  <option>대한민국</option>
-                  <option>한국</option>
-                  <option>남한</option>
-                </select>
-                <label for="user_hometown" class="sr-only"></label>
-                <select class="form-control col-3 mb-2 mb-sm-0 mr-0" id="user_hometown">
-                  <option disabled selected="selected" class="bg-faded text-white">지역</option>
-                  <option>서울</option>
-                  <option>인제</option>
-                  <option>강화</option>
-                </select>
-              </form>
-            </div>
-          </div>
+      <!-- 주소 입력 -->
+      <div class="address form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
+        <!-- 나라, 지역 선택-->
+        <label for="example-text-input" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3">&nbsp;&nbsp;&nbsp;ADDRESS</label>
+        <div class="address__content row col-12 col-sm-7 col-md-8">
+          <!-- 나라 선택 -->
+          <select class="form-control col-12 col-sm-5 col-md-4 col-xl-3 mb-2 mb-sm-0 ml-3 mr-sm-0" id="user_country">
+            <option disabled selected="selected" class="bg-faded text-white">나라</option>
+            <option>대한민국</option>
+            <option>한국</option>
+            <option>남한</option>
+          </select>
+          <!-- 지역 선택 -->
+          <select class="form-control col-12 col-sm-5 col-md-4 col-xl-3 mb-2 mb-sm-0 ml-3" id="user_hometown">
+            <option disabled selected="selected" class="bg-faded text-white">지역</option>
+            <option>서울</option>
+            <option>인제</option>
+            <option>강화</option>
+          </select>
         </div>
-      </div>
-      <div class="detailed_address__setting form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
+        <!-- 상세 주소 입력 -->
         <label for="example-text-input" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3"></label>
-        <div class="detailed_address__content col-12 col-sm-7 col-md-8">
+        <div class="detailed_address__content col-12 col-sm-7 col-md-8 mt-sm-2">
           <input class="form-control" type="text" placeholder="상세 주소" id="example-text-input">
         </div>
       </div>
-      <div class="birthdate__setting form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
-        <label for="example-text-input" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3"><i class="fa fa-circle mr-3"></i>BIRTHDATE</label>
-        <form action="#" class="form-inline">
-          <label for="user_birthdate_year" class="sr-only"></label>
-          <select class="form-control ml-3 mr-2" id="user_birthdate_year">
-            <option disabled selected="selected" class="bg-faded text-white">년도</option>
-            <option>2011</option>
-            <option>2010</option>
-            <option>2009</option>
-            <option>2008</option>
-            <option>2007</option>
-            <option>2006</option>
-            <option>2005</option>
-            <option>2004</option>
-            <option>2003</option>
-            <option>2002</option>
-            <option>2001</option>
-            <option>2000</option>
-            <option>1999</option>
-            <option>1998</option>
-            <option>1997</option>
-            <option>1996</option>
-            <option>1995</option>
-            <option>1994</option>
-            <option>1993</option>
-            <option>1992</option>
-            <option>1991</option>
-            <option>1990</option>
-            <option>1989</option>
-            <option>1988</option>
-            <option>1987</option>
-            <option>1986</option>
-            <option>1985</option>
-            <option>1984</option>
-            <option>1983</option>
-            <option>1982</option>
-            <option>1981</option>
-            <option>1980</option>
-            <option>1979</option>
-            <option>1978</option>
-            <option>1977</option>
-            <option>1976</option>
-            <option>1975</option>
-            <option>1974</option>
-            <option>1973</option>
-            <option>1972</option>
-            <option>1971</option>
-            <option>1970</option>
-          </select>
-          <label for="user_birthdate_month" class="sr-only"></label>
-          <select class="form-control mr-2" id="user_birthdate_month">
-            <option disabled selected="selected" class="bg-faded text-white">월</option>
-            <option>01</option>
-            <option>02</option>
-            <option>03</option>
-            <option>04</option>
-            <option>05</option>
-            <option>06</option>
-            <option>07</option>
-            <option>08</option>
-            <option>09</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-          </select>
-          <label for="user_birthdate_day" class="sr-only"></label>
-          <select class="form-control" id="user_birthdate_day">
-            <option disabled selected="selected" class="bg-faded text-white">일</option>
-            <option>01</option>
-            <option>02</option>
-            <option>03</option>
-            <option>04</option>
-            <option>05</option>
-            <option>06</option>
-            <option>07</option>
-            <option>08</option>
-            <option>09</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            <option>15</option>
-            <option>16</option>
-            <option>17</option>
-            <option>18</option>
-            <option>19</option>
-            <option>20</option>
-            <option>21</option>
-            <option>22</option>
-            <option>23</option>
-            <option>24</option>
-            <option>25</option>
-            <option>26</option>
-            <option>27</option>
-            <option>28</option>
-            <option>29</option>
-            <option>30</option>
-            <option>31</option>
-          </select>
-        </form>
+      <!-- 생년월일 선택 -->
+      <div class="birthdate form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
+        <label for="example-date-input" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3">&#42;&nbsp;&nbsp;BIRTHDATE</label>
+        <div class="col-12 col-sm-7 col-md-8">
+          <input class="form-control" type="date" value="2017-08-18" id="example-date-input">
+        </div>
       </div>
-      <div class="gender__setting form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
-        <label for="gender-text-input" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3"><i class="fa fa-circle mr-3"></i>GENDER</label>
-        <form action="#" class="form-inline">
-          <label for="user_gender" class="sr-only"></label>
-          <select class="form-control mb-2 mb-sm-0 ml-3 mr-2" id="user_gender">
+      <!-- 성별 선택 -->
+      <div class="gender form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
+        <label for="gender-text-input" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3">&#42;&nbsp;&nbsp;GENDER</label>
+        <div class="col-12 col-sm-7 col-md-8">
+          <select class="form-control col-sm-4 col-md-3 col-lg-2" id="user_gender">
             <option disabled selected="selected" class="bg-faded text-white">성별</option>
             <option>남성</option>
             <option>여성</option>
           </select>
-        </form>
+        </div>
       </div>
-      <div class="p_number__setting form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
-        <label for="example-tel-input" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3"><i class="fa fa-circle mr-3"></i>P.NUMBER</label>
+      <!-- 전화번호 입력 -->
+      <div class="p_number form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
+        <label for="example-tel-input" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3">&nbsp;&nbsp;&nbsp;P.NUMBER</label>
         <div class="p_number__content col-12 col-sm-7 col-md-8">
           <input class="form-control" type="tel" placeholder="01012345678" id="example-tel-input">
           <small id="emailHelp" class="form-text text-muted">&lsquo; &ndash; &rsquo; 없이 입력하세요.</small>
         </div>
       </div>
-    </form>
-    <div class="d-flex flex-row-reverse pr-sm-2 mr-sm-2">
-      <button type="button" class="btn__join_us px-3 py-1">
-        <a class="font-weight-bold btn__join_us__a" href="#">
+      <!-- 프로필 사진 등록 -->
+      <div class="p_image form-group row ml-sm-2 ml-md-4 ml-lg-5 mr-sm-2 mr-md-4 mr-lg-5 pl-md-4 pl-lg-5 pr-md-4 pr-lg-5">
+        <label for="exampleInputFile" class="col-form-label font-weight-bold col-12 col-sm-5 col-md-4 col-lg-3">&nbsp;&nbsp;&nbsp;Profile Image</label>
+        <div class="p_number__content col-12 col-sm-7 col-md-8">
+          <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+          <small id="fileHelp" class="form-text text-muted">프로필 사진으로 등록할 이미지 파일을 첨부해주세요.</small>
+        </div>
+      </div>
+      <!-- 회원 가입 버튼 -->
+      <div class="d-flex flex-row-reverse mr-sm-1 mr-md-3 mr-lg-5 pr-lg-5">
+        <button type="button" class="btn__join_us font-weight-bold px-3 py-1">
           JOIN<br>
           US
-        </a>
-      </button>
-    </div>
+        </button>
+      </div>
+    </form>
   </div>
-  <!-- // 회원 정보 수정 -->
+  <!-- // 회원 가입 -->
 
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

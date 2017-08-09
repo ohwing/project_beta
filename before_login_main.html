@@ -34,22 +34,37 @@
   <main class="main mt-5">
     <div id="map" style="width:100%;height:100vh;">
       <div class="basic_map pt-3">
-        <h1 class="logo ml-4">TourPin</h1>
-        <h5 class="total mt-5 pl-2 ml-4">Total number of travelers</h5>
-        <h5 class="mini_total ml-5 pl-2">Korea</h5>
-        <h5 class="total mt-3 pl-2 ml-4">The most area</h5>
-        <h5 class="mini_total ml-5 pl-2">553</h5>
+        <div class="d-flex justify-content-end">
+          <div class="mr-auto p-2">
+            <img src="/assets/img/logo3.png" style="width: 20%;"></img>
+          </div>
+          <div class="p-2">
+            <!-- top 10 버튼 및 목록-->
+              <div class="dropdown mr-5 pr-4">
+                <button class="btn btn-secondary top-list-bt" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  TOP 10
+                </button>
+                <div class="dropdown-menu top-list" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" type="button">1. 제주도</button>
+                  <button class="dropdown-item" type="button">2. 부산</button>
+                  <button class="dropdown-item" type="button">3. 강원도</button>
+                  <button class="dropdown-item" type="button">4. 제주도</button>
+                  <button class="dropdown-item" type="button">5. 부산</button>
+                  <button class="dropdown-item" type="button">6. 강원도</button>
+                  <button class="dropdown-item" type="button">7. 제주도</button>
+                  <button class="dropdown-item" type="button">8. 부산</button>
+                  <button class="dropdown-item" type="button">9. 강원도</button>
+                  <button class="dropdown-item" type="button">10. 강원도</button>
+                </div>
+              </div>
+          </div>
+        </div>
       </div>
     </div>
+    
   </main>
 
   <!-- // main -->
-
-  <span class="icon fixed-bottom">
-      <a class="fa fa-search-plus fa-3x" href="#"></a>
-  </span>
-  
-  
 
 <!-- 로그인창 모달 -->
 <form>
