@@ -1,3 +1,11 @@
+@font-face {
+    font-family:'SeoulNamsanM';
+    src:url('/assets/font/SeoulNamsanM/SeoulNamsanM.eot');
+    src:url('/assets/font/SeoulNamsanM/SeoulNamsanM.eot?#iefix') format('embedded-opentype'), /* IE 6,7,8 적용, embedded-opentype -> IE 8,9 적용 */
+        url('/assets/font/SeoulNamsanM/SeoulNamsanM.woff') format('woff'), /* IE 제외한 나머지 (크롬 등등) */
+        url('/assets/font/SeoulNamsanM/SeoulNamsanM.ttf') format('truetype');
+}
+
 html {
     font-size: 15px;
     line-height: 1.6;
@@ -5,6 +13,7 @@ html {
 
 * {
     letter-spacing: -0.02em;
+	font-family: "SeoulNamsanM";
 }
 
 a {

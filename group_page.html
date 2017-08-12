@@ -8,42 +8,106 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/group_page.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css" type="text/css" />
 </head>
 
 <body>
     <!-- Header -->
-    <header class="header fixed-top">
-        <nav class="navbar navbar-toggleable-md navbar-light bg-sambemi">
-            <a class="navbar-brand navbar-white" href="#">PILOT</a>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">오제웅 여행자님<span class="sr-only">(여행자님 어서오세요! 현재 계급은 파일럿 입니다!)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">여행중</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">휴식중</a>
-                </li>
-            </ul>
-            <a class="nav-link navbar-white px-0 py-1 mr-3" href="#"><i class="fa fa-bolt"></i></a>
-            <div class="dropdown">
-                <button class="header__button navbar-white px-0 py-lg-0 py-md-1 py-sm-0 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    MENU <i class="fa fa-bars"></i>
-                </button>
-                <div class="header__dropdown dropdown-menu mr-auto" aria-labelledby="dropdownMenuButton">
-                    <ul class="header__ul text-right p-0 m-0">
-                        <li><a class="dropdown-item" href="after_login_main.html">main</a></li>
-                        <li><a class="dropdown-item" href="newspeed1.html">newspeed</a></li>
-                        <li><a class="dropdown-item" href="group_page.html">tourship</a></li>
-                        <li><a class="dropdown-item" href="preference0_reconfirm.html">set-up</a></li>
-                        <li><a class="dropdown-item" href="before_login_main.html">logout</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- //Header -->
+  <header class="header fixed-top">
+    <!-- navbar -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-tourpin">
+      <!-- 여행자 등급 -->
+      <a class="navbar-brand navbar-white" href="#">PILOT</a>
+      <!-- 여행자 정보 -->
+      <ul class="navbar-nav mr-auto">
+        <!-- 여행자 이름 -->
+        <li class="nav-item active">
+          <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">장근열 여행자님<span class="sr-only">(여행자님 어서오세요! 현재 등급은 파일럿 입니다!)</span></a>
+        </li>
+        <!-- 여행자 상태 -->
+        <li class="nav-item ing">
+          <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">여행중</a>
+          <a class="nav-link navbar-white px-0 py-1 mr-3" href="#" style="display: none;">휴식중</a>
+        </li>
+      </ul>
+      <!-- 알림 -->
+      <div class="notice dropdown">
+        <!-- 번개 아이콘 -->
+        <button class="header__button navbar-white px-0 py-1 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="알림">
+          <i class="fa fa-bolt text-white"></i>
+        </button>
+        <!-- 알림 드롭 다운 -->
+        <div class="header__dropdown dropdown-menu mr-auto" aria-labelledby="dropdownMenuButton">
+          <ul class="header__ul text-left">
+            <a href="#">
+              <li class="dropdown-item">
+                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                <img class="mr-3" src="assets/img/my.jpg" alt>
+                <p class="img_block">오제웅 여행자님이 게시글에 댓글을 남기셨습니다.</p>
+              </li>
+            </a>
+            <a href="#">
+              <li class="dropdown-item">
+                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                <img class="mr-3" src="assets/img/my.jpg" alt>
+                <p class="img_block">오제웅 여행자님이 게시글에 댓글을 남기셨습니다.</p>
+              </li>
+            </a>
+            <a href="#">
+              <li class="dropdown-item">
+                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                <img class="mr-3" src="assets/img/my.jpg" alt="#">오제웅 여행자님이 추억을 등록하였습니다.
+              </li>
+            </a>
+            <a href="#">
+              <li class="dropdown-item">
+                <img class="mr-3" src="assets/img/my.jpg" alt="#">오제웅 여행자님과 친구가 되었습니다.
+                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+              </li>
+            </a>
+            <a href="#">
+              <li class="dropdown-item">
+                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+               <img class="mr-3" src="assets/img/my.jpg" alt="#">오제웅 여행자님이 친구를 요청하였습니다.
+              </li>
+            </a>
+            <!-- 더 보기 -->
+            <a href="#">
+              <li class="dropdown-plus text-center">
+                더 보기..
+              </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <!-- 메뉴 -->
+      <div class="menu dropdown">
+        <!-- 메뉴 바 아이콘 -->
+        <button class="header__button navbar-white px-0 py-1 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MENU <i class="fa fa-bars text-white"></i>
+        </button>
+        <!-- 메뉴 드롭다운 -->
+        <div class="header__dropdown dropdown-menu mr-auto" aria-labelledby="dropdownMenuButton">
+          <ul class="header__ul text-right p-0 m-0">
+            <!-- 투어핀 메인 -->
+            <li><a class="dropdown-item" href="after_login_main.html">main</a></li>
+            <!-- 뉴스피드 -->
+            <li><a class="dropdown-item" href="newspeed1.html">newspeed</a></li>
+            <!-- 그룹 페이지 -->
+            <li><a class="dropdown-item" href="group_page.html">tourship</a></li>
+            <!-- 그룹 페이지 -->
+            <li><a class="dropdown-item" href="friend_list.html">friends</a></li>
+            <!-- 환경 설정 -->
+            <li><a class="dropdown-item" href="preference0_reconfirm.html">set-up</a></li>
+            <!-- 로그 아웃 -->
+            <li><a class="dropdown-item" href="before_login_main.html">logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- // navbar -->
+  </header>
+  <!-- // Header -->
     <main id="main" class="container mt-5">
         <!-- My group header -->
         <header class="my_group__header row justify-content-between pt-5">
@@ -159,6 +223,7 @@
     <!-- //Main -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/assets/js/toggle.js"></script>
 </body>
 
 </html>

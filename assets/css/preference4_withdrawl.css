@@ -1,7 +1,20 @@
 /* Common Settings */
+@font-face {
+    font-family:'SeoulNamsanM';
+    src:url('/assets/font/SeoulNamsanM/SeoulNamsanM.eot');
+    src:url('/assets/font/SeoulNamsanM/SeoulNamsanM.eot?#iefix') format('embedded-opentype'), /* IE 6,7,8 적용, embedded-opentype -> IE 8,9 적용 */
+        url('/assets/font/SeoulNamsanM/SeoulNamsanM.woff') format('woff'), /* IE 제외한 나머지 (크롬 등등) */
+        url('/assets/font/SeoulNamsanM/SeoulNamsanM.ttf') format('truetype');
+}
+
 html {
   font-size: 15px;
   line-height: 1.6;
+}
+
+* {
+	font-family: 'SeoulNamsanM', sans-serif;
+	letter-spacing: -0.02em;
 }
 
 button {
@@ -36,67 +49,6 @@ ul, ol {
   list-style-type: none;
   padding: 0;
 }
-
-
-/* header */
-/* navbar 통일안 */
-.header__button {
-    background-color: inherit;
-}
-
-.navbar-nav, .navbar {
-    flex-direction: row;
-}
-
-.dropdown-menu {
-    right: 0;
-    left: inherit;
-}
-
-.dropdown-item {
-    font-size: 1.1rem;
-}
-
-.header__dropdown {
-	border: 0;
-	background-color: #666666;
-}
-
-.header__ul {
-	list-style-type: none;
-}
-
-.header__ul li a {
-	color: #fff !important;
-	transition: all 0.2s ease-in-out;
-}
-
-.dropdown-item:hover {
-	background-color: #464a4c;
-}
-
-.bg-sambemi {
-    background-color: #666666;
-}
-
-.navbar-white {
-    color: #fff !important;
-    font-weight: 700;
-    font-size: 1rem;
-}
-
-/* 최대 너비 400픽셀일 때 아래 속성 적용  */
-@media (max-width: 400px) {
-  .navbar a, .header__button, button.navbar-white {
-    font-size: .7rem;
-  }
-}
-
-.fa-bolt,
-.fa-bars {
-  color: #fff;
-}
-
 
 /* 피드백 & 도움말 */
 .btn__feedback {

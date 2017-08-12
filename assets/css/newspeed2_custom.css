@@ -138,6 +138,14 @@ a:hover, a:focus {
   color: #8ECEE3
 }
 
+.fa-plus {
+    color: rgb(61, 116, 170);
+}
+
+.dropdown-menu i {
+    color: rgb(61, 116, 170);
+}
+
 .dropdown-item:focus {
   background-color: transparent;
 }

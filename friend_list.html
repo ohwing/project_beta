@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tour Friend</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/friend.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css" type="text/css" />
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header fixed-top">
+        <!-- navbar -->
+        <nav class="navbar navbar-toggleable-md navbar-light bg-tourpin">
+            <!-- 여행자 등급 -->
+            <a class="navbar-brand navbar-white" href="#">PILOT</a>
+            <!-- 여행자 정보 -->
+            <ul class="navbar-nav mr-auto">
+                <!-- 여행자 이름 -->
+                <li class="nav-item active">
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">장근열 여행자님<span class="sr-only">(여행자님 어서오세요! 현재 등급은 파일럿 입니다!)</span></a>
+                </li>
+                <!-- 여행자 상태 -->
+                <li class="nav-item ing">
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">여행중</a>
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#" style="display: none;">휴식중</a>
+                </li>
+            </ul>
+            <!-- 알림 -->
+            <div class="notice dropdown">
+                <!-- 번개 아이콘 -->
+                <button class="header__button navbar-white px-0 py-1 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="알림">
+                    <i class="fa fa-bolt text-white"></i>
+                </button>
+                <!-- 알림 드롭 다운 -->
+                <div class="header__dropdown dropdown-menu mr-auto" aria-labelledby="dropdownMenuButton">
+                    <ul class="header__ul text-left">
+                        <a href="#">
+                            <li class="dropdown-item">
+                                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                                <img class="mr-3" src="assets/img/my.jpg" alt>
+                                <p class="img_block">오제웅 여행자님이 게시글에 댓글을 남기셨습니다.</p>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="dropdown-item">
+                                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                                <img class="mr-3" src="assets/img/my.jpg" alt>
+                                <p class="img_block">오제웅 여행자님이 게시글에 댓글을 남기셨습니다.</p>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="dropdown-item">
+                                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                                <img class="mr-3" src="assets/img/my.jpg" alt="#">오제웅 여행자님이 추억을 등록하였습니다.
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="dropdown-item">
+                                <img class="mr-3" src="assets/img/my.jpg" alt="#">오제웅 여행자님과 친구가 되었습니다.
+                                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="dropdown-item">
+                                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                                <img class="mr-3" src="assets/img/my.jpg" alt="#">오제웅 여행자님이 친구를 요청하였습니다.
+                            </li>
+                        </a>
+                        <!-- 더 보기 -->
+                        <a href="#">
+                            <li class="dropdown-plus text-center">
+                                더 보기..
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <!-- 메뉴 -->
+            <div class="menu dropdown">
+                <!-- 메뉴 바 아이콘 -->
+                <button class="header__button navbar-white px-0 py-1 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MENU <i class="fa fa-bars text-white"></i>
+                </button>
+                <!-- 메뉴 드롭다운 -->
+                <div class="header__dropdown dropdown-menu mr-auto" aria-labelledby="dropdownMenuButton">
+                    <ul class="header__ul text-right p-0 m-0">
+                        <!-- 투어핀 메인 -->
+                        <li><a class="dropdown-item" href="after_login_main.html">main</a></li>
+                        <!-- 뉴스피드 -->
+                        <li><a class="dropdown-item" href="newspeed1.html">newspeed</a></li>
+                        <!-- 그룹 페이지 -->
+                        <li><a class="dropdown-item" href="group_page.html">tourship</a></li>
+                        <!-- 친구확인 -->
+                        <li><a class="dropdown-item" href="friend_list.html">friends</a></li>
+                        <!-- 환경 설정 -->
+                        <li><a class="dropdown-item" href="preference0_reconfirm.html">set-up</a></li>
+                        <!-- 로그 아웃 -->
+                        <li><a class="dropdown-item" href="before_login_main.html">logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- // navbar -->
+    </header>
+    <!-- // Header -->
+    
+    <main id="main mt-5">
+        <section class="container mt-5">
+            <header class="friend__header row justify-content-between pt-5">
+                <h1 class="friend__header__logo">Tour Friend</h1>
+                <form class="friend__header__form px-2">
+                    <input type="text" class="friend__header__search form-control" id="tour__search" placeholder="여행자 검색">
+                </form>
+                <button type="submit" class="friend__header__btn px-3 py-1">Search</button>
+            </header>
+            
+            <section class="friend__body">
+                <header class="friend__body__header pt-4">
+                    <nav class="frined__body__nav nav">
+                      <a class="nav-link active all-light-gray-font" href="/friend_list.html">친구목록</a>
+                      <a class="nav-link all-light-gray-font" href="/friend_favorites.html">즐겨찾기</a>
+                      <a class="nav-link all-light-gray-font" href="/friend_chadan.html">차단관리</a>
+                    </nav>
+                </header>
+                <article class="friend__body__request pt-4">
+                    <nav class="frined__request__nav nav">
+                      
+                      <a class="nav-link mr-2 px-3" data-toggle="collapse" href="#friend__your__request">나에게 신청한 친구</a>
+                      <a class="nav-link mx-2 px-3" data-toggle="collapse" href="#friend__me__request">내가 신청한 친구</a>
+                      
+                    </nav>
+                    <div class="pt-4 collapse" id="friend__your__request">
+                        <h2 class="all-gray-font">나에게 신청한 친구</h2>
+                        <article class="friend__your__request row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/logo.PNG" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div>
+                                      <h4 class="card-title all-gray-font"><a href="#">임현경 여행자님</a></h4>
+                                      <button class="all-blue-button py-2 px-4">수락</button>
+                                      <button class="all-red-button py-2 px-4">거절</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/logo.PNG" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div> 
+                                      <h4 class="card-title all-gray-font"><a href="#">임현경 여행자님</a></h4>
+                                      <button class="all-blue-button py-2 px-4">수락</button>
+                                      <button class="all-red-button py-2 px-4">거절</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/logo.PNG" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div>
+                                      <h4 class="card-title all-gray-font"><a href="#">임현경 여행자님</a></h4>
+                                      <button class="all-blue-button py-2 px-4">수락</button>
+                                      <button class="all-red-button py-2 px-4">거절</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/logo.PNG" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div>
+                                      <h4 class="card-title all-gray-font"><a href="#">임현경 여행자님</a></h4>
+                                      <button class="all-blue-button py-2 px-4">수락</button>
+                                      <button class="all-red-button py-2 px-4">거절</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="pt-4 collapse" id="friend__me__request">
+                        <h2 class="all-gray-font">내가 신청한 친구</h2>
+                        <article class="friend__me__request row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/logo.PNG" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div>
+                                      <h4 class="card-title all-gray-font"><a href="#">임현경 여행자님</a></h4>
+                                      <button class="all-red-button py-2 px-4">신청취소</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/logo.PNG" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div>
+                                      <h4 class="card-title all-gray-font"><a href="#">임현경 여행자님</a></h4>
+                                      <button class="all-red-button py-2 px-4">신청취소</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/logo.PNG" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div>
+                                      <h4 class="card-title all-gray-font"><a href="#">임현경 여행자님</a></h4>
+                                      <button class="all-red-button py-2 px-4">신청취소</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/logo.PNG" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div>
+                                      <h4 class="card-title all-gray-font"><a href="#">임현경 여행자님</a></h4>
+                                      <button class="all-red-button py-2 px-4">신청취소</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+                
+                <article class="friend__body__list">
+                    <div class="pt-4">
+                        <h2>여행자 친구 리스트</h2>
+                        <article class="friend__me__request row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/my.jpg" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div>
+                                      <h4 class="card-title all-gray-font"><a href="#">박기철 여행자님</a></h4>
+                                      <p class="card-text all-light-gray-font">함께아는 친구 0명</p>
+                                      <button class="all-red-button py-2 px-4">친구끊기</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/logo.PNG" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div>
+                                      <h4 class="card-title all-gray-font"><a href="#">임현경 여행자님</a></h4>
+                                      <p class="card-text all-light-gray-font">함께아는 친구 0명</p>
+                                      <button class="all-red-button py-2 px-4">친구끊기</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/logo.PNG" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div>
+                                      <h4 class="card-title all-gray-font"><a href="#">임현경 여행자님</a></h4>
+                                      <p class="card-text all-light-gray-font">함께아는 친구 0명</p>
+                                      <button class="all-red-button py-2 px-4">친구끊기</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 pt-2 px-1">
+                                <div class="card row all__friend__card mx-0">
+                                  <img class="card-img-top" src="/assets/img/logo.PNG" alt="Card image cap">
+                                  <div class="card-block row justify-content-center align-items-center">
+                                    <div>
+                                      <h4 class="card-title all-gray-font"><a href="#">임현경 여행자님</a></h4>
+                                      <p class="card-text all-light-gray-font">함께아는 친구 0명</p>
+                                      <button class="all-red-button py-2 px-4">친구끊기</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </main>
+    
+    
+    
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/assets/js/toggle.js"></script>
+</body>
+</html>

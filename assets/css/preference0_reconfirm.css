@@ -1,17 +1,20 @@
 /* Common Settings */
+@font-face {
+    font-family:'SeoulNamsanM';
+    src:url('/assets/font/SeoulNamsanM/SeoulNamsanM.eot');
+    src:url('/assets/font/SeoulNamsanM/SeoulNamsanM.eot?#iefix') format('embedded-opentype'), /* IE 6,7,8 적용, embedded-opentype -> IE 8,9 적용 */
+        url('/assets/font/SeoulNamsanM/SeoulNamsanM.woff') format('woff'), /* IE 제외한 나머지 (크롬 등등) */
+        url('/assets/font/SeoulNamsanM/SeoulNamsanM.ttf') format('truetype');
+}
+
 html {
   font-size: 15px;
   line-height: 1.6;
 }
 
-button {
-  border: none;
-  cursor: pointer; /* 버튼에 커서를 올리면 손가락모양으로 바뀐다. */
-}
-
-button:focus {
-  outline: none; /* 버튼에 커서를 클릭하면 바깥줄에 아무것도 적용하지 않는다. */
-  border: none;
+* {
+	font-family: 'SeoulNamsanM', sans-serif;
+	letter-spacing: -0.02em;
 }
 
 a {
@@ -24,13 +27,18 @@ a:focus {
   text-decoration: none;
 }
 
-.btn:focus, .btn:active {
-	box-shadow: none;
+button {
+  border: none;
+  cursor: pointer; /* 버튼에 커서를 올리면 손가락모양으로 바뀐다. */
 }
 
-ul, ol {
-  list-style-type: none;
-  padding: 0;
+button:focus {
+  outline: none; /* 버튼에 커서를 클릭하면 바깥줄에 아무것도 적용하지 않는다. */
+  border: none;
+}
+
+.btn:focus, .btn:active {
+	box-shadow: none;
 }
 
 /* 피드백 & 도움말 */

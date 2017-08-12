@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourpin &ndash; 뉴스피드 - 내 타임라인</title>
     <title lang="ko">투어핀 뉴스피드</title>
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/kopubbatang.css">
+    <!-- fontawesome-icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- navbar css -->
+    <link rel="stylesheet" href="assets/css/navbar.css">    
     <!-- your custom css -->
     <link rel="stylesheet" href="assets/css/newspeed1_custom.css">
 </head>
@@ -18,38 +20,104 @@
 <body>
     <!-- Header -->
     <header class="header fixed-top">
-        <nav class="navbar navbar-toggleable-md navbar-light bg-sambemi">
+        <!-- navbar -->
+        <nav class="navbar navbar-toggleable-md navbar-light bg-tourpin">
+            <!-- 여행자 등급 -->
             <a class="navbar-brand navbar-white" href="#">PILOT</a>
+            <!-- 여행자 정보 -->
             <ul class="navbar-nav mr-auto">
+                <!-- 여행자 이름 -->
                 <li class="nav-item active">
-                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">박기철 여행자님<span class="sr-only">(여행자님 어서오세요! 현재 계급은 파일럿 입니다!)</span></a>
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">박기철 여행자님<span class="sr-only">(여행자님 어서오세요! 현재 등급은 파일럿 입니다!)</span></a>
                 </li>
-                <li class="nav-item">
+                <!-- 여행자 상태 -->
+                <li class="nav-item ing">
                     <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">여행중</a>
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#" style="display: none;">휴식중</a>
                 </li>
             </ul>
-            <a class="nav-link navbar-white px-0 py-1 mr-3" href="#"><i class="fa fa-bolt"></i></a>
-            <div class="dropdown">
-                <button class="header__button navbar-white px-0 py-lg-0 py-md-1 py-sm-0 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    MENU <i class="fa fa-bars"></i>
+            <!-- 알림 -->
+            <div class="notice dropdown">
+                <!-- 번개 아이콘 -->
+                <button class="header__button navbar-white px-0 py-1 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="알림">
+                    <i class="fa fa-bolt text-white"></i>
                 </button>
-                <div class="dropdown-menu nav-menu" aria-labelledby="dropdownMenuButton">
-                    <ul class="py-0">
+                <!-- 알림 드롭 다운 -->
+                <div class="header__dropdown dropdown-menu mr-auto" aria-labelledby="dropdownMenuButton">
+                    <ul class="header__ul text-left">
+                        <a href="#">
+                            <li class="dropdown-item">
+                                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                                <img class="mr-3" src="assets/img/my.jpg" alt>
+                                <p class="img_block">오제웅 여행자님이 게시글에 댓글을 남기셨습니다.</p>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="dropdown-item">
+                                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                                <img class="mr-3" src="assets/img/my.jpg" alt>
+                                <p class="img_block">오제웅 여행자님이 게시글에 댓글을 남기셨습니다.</p>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="dropdown-item">
+                                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                                <img class="mr-3" src="assets/img/my.jpg" alt="#">오제웅 여행자님이 추억을 등록하였습니다.
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="dropdown-item">
+                                <img class="mr-3" src="assets/img/my.jpg" alt="#">오제웅 여행자님과 친구가 되었습니다.
+                                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="dropdown-item">
+                                <button type="button" class="close" aria-label="Close"><span class="close-btn" aria-hidden="true">&times;</span></button>
+                                <img class="mr-3" src="assets/img/my.jpg" alt="#">오제웅 여행자님이 친구를 요청하였습니다.
+                            </li>
+                        </a>
+                        <!-- 더 보기 -->
+                        <a href="#">
+                            <li class="dropdown-plus text-center">
+                                더 보기..
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <!-- 메뉴 -->
+            <div class="menu dropdown">
+                <!-- 메뉴 바 아이콘 -->
+                <button class="header__button navbar-white px-0 py-1 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MENU <i class="fa fa-bars text-white"></i>
+                </button>
+                <!-- 메뉴 드롭다운 -->
+                <div class="header__dropdown dropdown-menu mr-auto" aria-labelledby="dropdownMenuButton">
+                    <ul class="header__ul text-right p-0 m-0">
+                        <!-- 투어핀 메인 -->
                         <li><a class="dropdown-item" href="after_login_main.html">main</a></li>
+                        <!-- 뉴스피드 -->
                         <li><a class="dropdown-item" href="newspeed1.html">newspeed</a></li>
+                        <!-- 그룹 페이지 -->
                         <li><a class="dropdown-item" href="group_page.html">tourship</a></li>
+                        <!-- 친구확인 -->
+                        <li><a class="dropdown-item" href="friend_list.html">friends</a></li>
+                        <!-- 환경 설정 -->
                         <li><a class="dropdown-item" href="preference0_reconfirm.html">set-up</a></li>
+                        <!-- 로그 아웃 -->
                         <li><a class="dropdown-item" href="before_login_main.html">logout</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <!-- // navbar -->
     </header>
-    <!-- /Header -->
+    <!-- // Header -->
     <!-- Serch -->
-    <article class="article fixed-top">
+    <article class="article">
         <div class="serch navbar">
-        <div id="sb-search" class="sb-search">
+        <div id="sb-search" class="sb-search mt-5">
         <form>
             <input class="sb-search-input" placeholder="검색어를 입력하세요." type="text" value="" name="search" id="search">
             <input class="sb-search-submit" type="submit" value="">
@@ -62,478 +130,543 @@
     <!-- Main -->
     <main class="main">
         <div class="container pt-5 mt-5">
-            <section class="posts pt-4">
-                <div class="btn-group d-flex row justify-content-end" role="group" aria-label="Basic example" data-toggle="bottons">
-                    <button type="button" class="btn btn-secondary"><a href=./newspeed2.html>실시간 타임라인 보기</a></button>
+            <div class="btn-group d-flex row justify-content-end" role="group" aria-label="Basic example" data-toggle="bottons">
+                <button type="button" class="btn btn-secondary"><a href=./newspeed2.html>실시간 타임라인 보기</a></button>
+            </div>
+            
+            <!-- 사진이 하나 일 때 -->
+            <div>
+                <section class="posts pt-4">
+                    <ul class="row justify-content-center">
+                        <li class="col-12 col-sm-6">
+                            <div class="post pl-3 pt-1">
+                                <div class="d-flex flex-nowrap">
+                                    <a href="#" class="card_profile d-flex justify-content-center align-items-center">
+                                        <img class="card-img-top height-fix" src="/assets/img/my.jpg" alt>
+                                    </a>
+                                    <p class="post_user mt-2 ml-2"><a href="#">'박기철</a> 여행자님'</p>
+                                </div>
+                                <div class="d-flex flex-nowrap pt-2">
+                                    <p class="post_upload">UPLOAD DATE</p>
+                                    <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-12 col-sm-6">
+                            <div class="icon pt-3 pr-3 row justify-content-end">
+                                <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2 heart_o" aria-hidden="true"></button>
+                                <button type="button" class="fa fa-heart fa-2x px-2 pb-2 heart
+                                " aria-hidden="true"></button>
+                                <a href="#"><i class="fa fa-map-marker fa-2x px-1" aria-hidden="true"></i></a>
+                                <div class="dropdown">
+                                    <button class="btn_option" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-plus fa-2x pb-2" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> 공유하기 </a>
+                                        <div class="report" data-toggle="modal" data-target="#report">
+                                            <a class="dropdown-item" href="#"><i class="fa fa-ban" aria-hidden="true"></i> 신고하기 </a>
+                                        </div>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-user-times" aria-hidden="true"></i> 차단하기 </a>
+                                        <a class="dropdown-item" href="/newspeed1_edit.html"><i class="fa fa-pencil" aria-hidden="true"></i> 수정하기 </a>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> 삭제하기 </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <div class="group__card row mx-0">
+                    <div class="col-12">
+                        <div class="row">
+                            <!-- Button trigger modal -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 px-0 mt-3 mt-md-0" data-toggle="modal" data-target=".bd-example-modal-lg2">
+                                <div class="card">
+                                    <a href="#" class="tourbook__main__container d-flex justify-content-center">
+                                        <img class="tourbook__main__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /Button trigger modal -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 px-0 mt-3 mt-md-0">
+                                <!-- Button trigger modal -->
+                                <div class="card-block" data-toggle="modal" data-target=".bd-example-modal-lg">
+                                    <a href="#">
+                                        <h4 class="card-title">글꼴 테스트중</h4>
+                                        <p class="card-text">아무말 대잔치 하는중... 12시가 지나 8월 11일이다. 해커톤까지 일주일 남았다. 화이링~ 아 그리고 내 아이폰6s 언제 배송오는거야 ㅡㅡ</p>
+                                    </a>
+                                </div>
+                                <!-- /Button trigger modal -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <ul class="row justify-content-center">
-                    <li class="col-12 col-sm-6">
-                        <div class="post pl-3 pt-1">
-                            <div class="d-flex flex-nowrap">
-                                <a href="#" class="card_profile d-flex justify-content-center align-items-center">
-                                    <img class="card-img-top height-fix" src="/assets/img/my.jpg" alt>
-                                </a>
-                                <p class="post_user mt-2 ml-2"><a href="#">'박기철</a> 여행자님'</p>
-                            </div>
-                            <div class="d-flex flex-nowrap">
-                                <p class="post_upload">UPLOAD DATE</p>
-                                <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-12 col-sm-6">
-                        <div class="icon pt-3 pr-3 row justify-content-end">
-                            <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2 heart_o" aria-hidden="true"></button>
-                            <button type="button" class="fa fa-heart fa-2x px-2 pb-2 heart
-                            " aria-hidden="true"></button>
-                            <i class="fa fa-map-marker fa-2x px-1" aria-hidden="true"></i>
-                            <div class="dropdown">
-                                <button class="btn_option" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-plus fa-2x pb-2" aria-hidden="true"></i>
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> 공유하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-ban" aria-hidden="true"></i> 신고하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 차단하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 수정하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 삭제하기 </a>
+                <hr>
+            </div>
+            <!-- 사진이 하나 일 때 -->
+                
+            <!-- 사진이 두개 일 때 -->
+            <div>
+                <section class="posts pt-4">
+                    <ul class="row justify-content-center">
+                        <li class="col-12 col-sm-6">
+                            <div class="post pl-3 pt-1">
+                                <div class="d-flex flex-nowrap">
+                                    <a href="#" class="card_profile d-flex justify-content-center align-items-center">
+                                        <img class="card-img-top height-fix" src="/assets/img/my.jpg" alt>
+                                    </a>
+                                    <p class="post_user mt-2 ml-2"><a href="#">'박기철</a> 여행자님'</p>
+                                </div>
+                                <div class="d-flex flex-nowrap pt-2">
+                                    <p class="post_upload">UPLOAD DATE</p>
+                                    <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <div class="group__card row mx-0">
-                <div class="col-12">
-                    <div class="row">
-                        <!-- Button trigger modal -->
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 px-0 mt-3 mt-md-0" data-toggle="modal" data-target=".bd-example-modal-lg2">
-                            <a href="#" class="tourbook__main__container d-flex justify-content-center">
-                                <img class="tourbook__main__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
-                            </a>
-                        </div>
-                        <!-- /Button trigger modal -->
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://www.petzine.co.kr/news/photo/201701/885_2223_5221.jpg" alt>
-                                        </a>
-                                    </div>
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://www.mypetnews.net/news/photo/201312/447_288_511.jpg" alt>
-                                        </a>
+                        </li>
+                        <li class="col-12 col-sm-6">
+                            <div class="icon pt-3 pr-3 row justify-content-end">
+                                <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2 heart_o" aria-hidden="true"></button>
+                                <button type="button" class="fa fa-heart fa-2x px-2 pb-2 heart
+                                " aria-hidden="true"></button>
+                                <a href="#"><i class="fa fa-map-marker fa-2x px-1" aria-hidden="true"></i></a>
+                                <div class="dropdown">
+                                    <button class="btn_option" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-plus fa-2x pb-2" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> 공유하기 </a>
+                                        <div class="report" data-toggle="modal" data-target="#report">
+                                            <a class="dropdown-item" href="#"><i class="fa fa-ban" aria-hidden="true"></i> 신고하기 </a>
+                                        </div>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-user-times" aria-hidden="true"></i> 차단하기 </a>
+                                        <a class="dropdown-item" href="/newspeed1_edit.html"><i class="fa fa-pencil" aria-hidden="true"></i> 수정하기 </a>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> 삭제하기 </a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
-                                        </a>
-                                    </div>
-                                    <!-- Button trigger modal -->
-                                    <div class="card-block" data-toggle="modal" data-target=".bd-example-modal-lg">
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <div class="group__card row mx-0">
+                    <div class="col-12">
+                        <div class="row">
+                            <!-- Button trigger modal -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 px-0 mt-3 mt-md-0" data-toggle="modal" data-target=".bd-example-modal-lg2">
+                                <div class="card">
+                                    <a href="#" class="tourbook__main__container d-flex justify-content-center">
+                                        <img class="tourbook__main__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 px-0 mt-3 mt-md-0">
+                                <div class="card">
+                                    <a href="#" class="tourbook__main__container d-flex justify-content-center">
+                                        <img class="tourbook__main__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 px-0 mt-3 mt-md-0">
+                                <!-- Button trigger modal -->
+                                <div class="card-block" data-toggle="modal" data-target=".bd-example-modal-lg">
+                                    <div>
                                         <a href="#">
                                             <h4 class="card-title">Card title</h4>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                         </a>
                                     </div>
-                                    <!-- /Button trigger modal -->
                                 </div>
+                                <!-- /Button trigger modal -->
                             </div>
                         </div>
                     </div>
                 </div>
+                <hr>
             </div>
-            <hr>
-            <section class="posts pt-4">
-                <ul class="row justify-content-center">
-                    <li class="col-12 col-sm-6">
-                        <div class="post pl-3 pt-1">
-                            <p class="post_user"><a href="#">'박기철</a> 여행자님'</p>
-                            <div class="d-flex flex-nowrap">
-                                <p class="post_upload">UPLOAD DATE</p>
-                                <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-12 col-sm-6">
-                        <div class="icon pt-3 pr-3 row justify-content-end">
-                            <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2" aria-hidden="true"></button>
-                            <button type="button" class="fa fa-heart fa-2x px-2 pb-2" aria-hidden="true"></button>
-                            <i class="fa fa-map-marker fa-2x px-1" aria-hidden="true"></i>
-                            <div class="dropdown">
-                                <button class="btn_option" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-plus fa-2x pb-2" aria-hidden="true"></i>
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> 공유하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-ban" aria-hidden="true"></i> 신고하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 차단하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 수정하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 삭제하기 </a>
+            <!-- 사진이 두개 일 때 -->
+                
+            <!-- 사진이 세개 일 때 -->
+            <div>
+                <section class="posts pt-4">
+                    <ul class="row justify-content-center">
+                        <li class="col-12 col-sm-6">
+                            <div class="post pl-3 pt-1">
+                                <div class="d-flex flex-nowrap">
+                                    <a href="#" class="card_profile d-flex justify-content-center align-items-center">
+                                        <img class="card-img-top height-fix" src="/assets/img/my.jpg" alt>
+                                    </a>
+                                    <p class="post_user mt-2 ml-2"><a href="#">'박기철</a> 여행자님'</p>
+                                </div>
+                                <div class="d-flex flex-nowrap pt-2">
+                                    <p class="post_upload">UPLOAD DATE</p>
+                                    <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <div class="group__card row mx-0">
-                <div class="col-12">
-                    <div class="row">
-                        <!-- Button trigger modal -->
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 px-0 mt-3 mt-md-0" data-toggle="modal" data-target=".bd-example-modal-lg2">
-                            <a href="#" class="tourbook__main__container d-flex justify-content-center">
-                                <img class="tourbook__main__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
-                            </a>
-                        </div>
-                        <!-- /Button trigger modal -->
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://www.petzine.co.kr/news/photo/201701/885_2223_5221.jpg" alt>
-                                        </a>
+                        </li>
+                        <li class="col-12 col-sm-6">
+                            <div class="icon pt-3 pr-3 row justify-content-end">
+                                <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2 heart_o" aria-hidden="true"></button>
+                                <button type="button" class="fa fa-heart fa-2x px-2 pb-2 heart
+                                " aria-hidden="true"></button>
+                                <a href="#"><i class="fa fa-map-marker fa-2x px-1" aria-hidden="true"></i></a>
+                                <div class="dropdown">
+                                    <button class="btn_option" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-plus fa-2x pb-2" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> 공유하기 </a>
+                                        <div class="report" data-toggle="modal" data-target="#report">
+                                            <a class="dropdown-item" href="#"><i class="fa fa-ban" aria-hidden="true"></i> 신고하기 </a>
+                                        </div>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-user-times" aria-hidden="true"></i> 차단하기 </a>
+                                        <a class="dropdown-item" href="/newspeed1_edit.html"><i class="fa fa-pencil" aria-hidden="true"></i> 수정하기 </a>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> 삭제하기 </a>
                                     </div>
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://www.mypetnews.net/news/photo/201312/447_288_511.jpg" alt>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
-                                        </a>
-                                    </div>
-                                    <!-- Button trigger modal -->
-                                    <div class="card-block" data-toggle="modal" data-target=".bd-example-modal-lg">
-                                        <a href="#">
-                                            <h4 class="card-title">Card title</h4>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        </a>
-                                    </div>
-                                    <!-- /Button trigger modal -->
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-                        <section class="posts pt-4">
-                <ul class="row justify-content-center">
-                    <li class="col-12 col-sm-6">
-                        <div class="post pl-3">
-                            <p class="post_user pt-1"><a href="#">'박기철</a> 여행자님'</p>
-                            <div class="d-flex flex-nowrap">
-                                <p class="post_upload">UPLOAD DATE</p>
-                                <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-12 col-sm-6">
-                        <div class="icon pt-3 pr-3 row justify-content-end">
-                            <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2" aria-hidden="true"></button>
-                            <button type="button" class="fa fa-heart fa-2x px-2 pb-2" aria-hidden="true"></button>
-                            <i class="fa fa-map-marker fa-2x px-1" aria-hidden="true"></i>
-                            <div class="dropdown">
-                                <button class="btn_option" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-plus fa-2x pb-2" aria-hidden="true"></i>
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> 공유하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-ban" aria-hidden="true"></i> 신고하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 차단하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 수정하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 삭제하기 </a>
+                        </li>
+                    </ul>
+                </section>
+                <div class="group__card row mx-0">
+                    <div class="col-12">
+                        <div class="row">
+                            <!-- Button trigger modal -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 px-0 mt-3 mt-md-0" data-toggle="modal" data-target=".bd-example-modal-lg2">
+                                <div class="card">
+                                    <a href="#" class="tourbook__main__container d-flex justify-content-center">
+                                        <img class="tourbook__main__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
+                                    </a>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <div class="group__card row mx-0">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 px-0 mt-3 mt-md-0">
-                            <a href="#" class="tourbook__main__container d-flex justify-content-center aalign-items-center">
-                                <img class="tourbook__main__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
-                            </a>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center aalign-items-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://www.petzine.co.kr/news/photo/201701/885_2223_5221.jpg" alt>
-                                        </a>
+                            <!-- /Button trigger modal -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
+                                        <div class="card">
+                                            <a href="#" class="tourbook__side__container d-flex justify-content-center">
+                                                <img class="tourbook__side__img card-img-top height-fix" src="http://www.petzine.co.kr/news/photo/201701/885_2223_5221.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="card">
+                                            <a href="#" class="tourbook__side__container d-flex justify-content-center">
+                                                <img class="tourbook__side__img card-img-top height-fix" src="http://www.mypetnews.net/news/photo/201312/447_288_511.jpg" alt>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center aalign-items-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://www.mypetnews.net/news/photo/201312/447_288_511.jpg" alt>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center aalign-items-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
-                                        </a>
-                                    </div>
-                                    <div class="card-block">
-                                        <h4 class="card-title">Card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
+                                        <!-- Button trigger modal -->
+                                        <div class="card-block" data-toggle="modal" data-target=".bd-example-modal-lg">
+                                            <a href="#">
+                                                <h4 class="card-title">Card title</h4>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            </a>
+                                        </div>
+                                        <!-- /Button trigger modal -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <hr>
             </div>
-            <hr>
-                        <section class="posts pt-4">
-                <ul class="row justify-content-center">
-                    <li class="col-12 col-sm-6">
-                        <div class="post pl-3 pt-1">
-                            <p class="post_user"><a href="#">'박기철</a> 여행자님'</p>
-                            <div class="d-flex flex-nowrap">
-                                <p class="post_upload">UPLOAD DATE</p>
-                                <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-12 col-sm-6">
-                        <div class="icon pt-3 pr-3 row justify-content-end">
-                            <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2" aria-hidden="true"></button>
-                            <button type="button" class="fa fa-heart fa-2x px-2 pb-2" aria-hidden="true"></button>
-                            <i class="fa fa-map-marker fa-2x px-1" aria-hidden="true"></i>
-                            <div class="dropdown">
-                                <button class="btn_option" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-plus fa-2x pb-2" aria-hidden="true"></i>
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> 공유하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-ban" aria-hidden="true"></i> 신고하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 차단하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 수정하기 </a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 삭제하기 </a>
+            <!-- 사진이 세개 일 때 -->
+                
+            <!-- 사진이 네개 일 때 -->
+            <div>
+                <section class="posts pt-4">
+                    <ul class="row justify-content-center">
+                        <li class="col-12 col-sm-6">
+                            <div class="post pl-3 pt-1">
+                                <div class="d-flex flex-nowrap">
+                                    <a href="#" class="card_profile d-flex justify-content-center align-items-center">
+                                        <img class="card-img-top height-fix" src="/assets/img/my.jpg" alt>
+                                    </a>
+                                    <p class="post_user mt-2 ml-2"><a href="#">'박기철</a> 여행자님'</p>
+                                </div>
+                                <div class="d-flex flex-nowrap pt-2">
+                                    <p class="post_upload">UPLOAD DATE</p>
+                                    <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <div class="group__card row mx-0">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 px-0 mt-3 mt-md-0">
-                            <a href="#" class="tourbook__main__container d-flex justify-content-center aalign-items-center">
-                                <img class="tourbook__main__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
-                            </a>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center aalign-items-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://www.petzine.co.kr/news/photo/201701/885_2223_5221.jpg" alt>
-                                        </a>
-                                    </div>
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center aalign-items-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://www.mypetnews.net/news/photo/201312/447_288_511.jpg" alt>
-                                        </a>
+                        </li>
+                        <li class="col-12 col-sm-6">
+                            <div class="icon pt-3 pr-3 row justify-content-end">
+                                <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2 heart_o" aria-hidden="true"></button>
+                                <button type="button" class="fa fa-heart fa-2x px-2 pb-2 heart
+                                " aria-hidden="true"></button>
+                                <a href="#"><i class="fa fa-map-marker fa-2x px-1" aria-hidden="true"></i></a>
+                                <div class="dropdown">
+                                    <button class="btn_option" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-plus fa-2x pb-2" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> 공유하기 </a>
+                                        <div class="report" data-toggle="modal" data-target="#report">
+                                            <a class="dropdown-item" href="#"><i class="fa fa-ban" aria-hidden="true"></i> 신고하기 </a>
+                                        </div>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-user-times" aria-hidden="true"></i> 차단하기 </a>
+                                        <a class="dropdown-item" href="/newspeed1_edit.html"><i class="fa fa-pencil" aria-hidden="true"></i> 수정하기 </a>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> 삭제하기 </a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
-                                    <div class="card">
-                                        <a href="#" class="tourbook__side__container d-flex justify-content-center aalign-items-center">
-                                            <img class="tourbook__side__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
-                                        </a>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <div class="group__card row mx-0">
+                    <div class="col-12">
+                        <div class="row">
+                            <!-- Button trigger modal -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 px-0 mt-3 mt-md-0" data-toggle="modal" data-target=".bd-example-modal-lg2">
+                                <div class="card">
+                                    <a href="#" class="tourbook__main__container d-flex justify-content-center">
+                                        <img class="tourbook__main__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /Button trigger modal -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
+                                        <div class="card">
+                                            <a href="#" class="tourbook__side__container d-flex justify-content-center">
+                                                <img class="tourbook__side__img card-img-top height-fix" src="http://www.petzine.co.kr/news/photo/201701/885_2223_5221.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="card">
+                                            <a href="#" class="tourbook__side__container d-flex justify-content-center">
+                                                <img class="tourbook__side__img card-img-top height-fix" src="http://www.mypetnews.net/news/photo/201312/447_288_511.jpg" alt>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="card-block">
-                                        <h4 class="card-title">Card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 flex-row px-0">
+                                        <div class="card">
+                                            <a href="#" class="tourbook__side__container d-flex justify-content-center">
+                                                <img class="tourbook__side__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
+                                            </a>
+                                        </div>
+                                        <!-- Button trigger modal -->
+                                        <div class="card-block" data-toggle="modal" data-target=".bd-example-modal-lg">
+                                            <a href="#">
+                                                <h4 class="card-title">Card title</h4>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            </a>
+                                        </div>
+                                        <!-- /Button trigger modal -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <hr>
             </div>
-            <hr>
+            <!-- 사진이 네개 일 때 -->
         </div>
     </main>
     <!-- /Main -->
     <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <!-- bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/assets/js/newspeed.js"></script>
-    <script type="text/javascript" src="/assets/js/classie.js"></script> 
-    <script type="text/javascript" src="/assets/js/uisearch.js"></script>
+    <script type="text/javascript" src="/assets/js/all/alljs.js"></script>
+    <script type="text/javascript" src="/assets/js/search/classie.js"></script> 
+    <script type="text/javascript" src="/assets/js/search/uisearch.js"></script>
+    <!-- 토글 기능 자바스크립트 -->
+    <script type="text/javascript" src="/assets/js/navbar/toggle.js"></script>
+    <!-- search plugin -->
     <script>
         new UISearch( document.getElementById( 'sb-search' ) );
     </script>
+    
+    <!-- Modal content -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">박기철 여행자님의 게시글</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- 여기부터 내용 -->
+                    <Main class="Main">
+                        <div class="container">
+                            <section class="posts">
+                                <div class="row justify-content-center">
+                                    <div class="col-sm-8 col-12">
+                                        <div class="post pl-6">
+                                            <p class="post_user ml-2 pt-1"><a href="#">'박기철</a> 여행자님'</p>
+                                            <div class="d-flex flex-nowrap ml-2">
+                                                <p class="post_upload">UPLOAD DATE</p>
+                                                <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
+                                            </div>
+                                        </div>
+                                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                            </ol>
+                                            <div class="carousel-inner" role="listbox">
+                                                <div class="carousel-item active">
+                                                    <a href="#" class="card-img_container d-flex justify-content-center align-items-center">
+                                                        <img class="card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt="First slide">
+                                                    </a>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <a href="#" class="card-img_container d-flex justify-content-center align-items-center">
+                                                        <img class="card-img-top height-fix" src="http://www.mypetnews.net/news/photo/201312/447_288_511.jpg" alt="First slide">
+                                                    </a>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <a href="#" class="card-img_container d-flex justify-content-center align-items-center">
+                                                        <img class="card-img-top height-fix" src="http://www.petzine.co.kr/news/photo/201701/885_2223_5221.jpg" alt="First slide">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-12">
+                                        <div class="icon pt-3 pr-3 row justify-content-end">
+                                            <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2" aria-hidden="true"></button>
+                                            <button type="button" class="fa fa-heart fa-2x px-2 pb-2" aria-hidden="true"></button>
+                                            <i class="fa fa-map-marker fa-2x px-1" aria-hidden="true"></i>
+                                            <div class="dropdown">
+                                                <button class="btn_option" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa fa-plus fa-2x pb-2" aria-hidden="true"></i>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> 공유하기 </a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-ban" aria-hidden="true"></i> 신고하기 </a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 차단하기 </a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 수정하기 </a>
+                                                    <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 삭제하기 </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="post_content pt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem enim, sint quas repudiandae, et placeat nesciunt, ipsa harum officia, numquam excepturi dolor fugit nostrum modi. Architecto impedit accusamus sequi laborum.</p>
+                                    </div>
+                                    <table class="table mt-4">
+                                        <tbody>
+                                            <tr>
+                                                <td width="20%">박기철</td>
+                                                <td width="50%">멋지네요!</td>
+                                                <td width="30%">2017.07.03 AM 10:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="20%">이두희</td>
+                                                <td width="50%">상지대 우승!</td>
+                                                <td width="30%">2017.07.03 AM 10:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="20%">노지승</td>
+                                                <td width="55%">빠잉~</td>
+                                                <td width="25%">2017.07.03 AM 10:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="reply">
+                                                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 reply_text" placeholder="댓글달기">
+                                            </div>
+                                            <div class="reply_submit">
+                                                <button type="submit" class="btn btn-primary">확인</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </Main>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal content -->
+    <!-- Modal img -->
+    <div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">박기철 여행자님의 게시글</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="tourbook__main__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal img -->
+    <!-- Modal Report -->
+    <div class="modal fade" id="report" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">게시글 신고하기</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          <!-- modal content -->
+          <div class="row">
+            <!-- 욕설/비방 -->
+            <div class="row">
+              <label class="form-check-label ml-5 pl-5">
+                <input class="form-check-input mr-1" type="checkbox" value="">
+              </label>
+              <p class="font-weight-bold mt-1">욕설/비방</p>
+            </div>
+            <!-- 음란물 -->
+            <div class="row pl-xl-3" >
+              <label class="form-check-label ml-5 pl-4">
+                <input class="form-check-input mr-1" type="checkbox" value="">
+              </label>
+              <p class="font-weight-bold mt-1">음란물</p>
+            </div>
+            <!-- 광고 -->
+            <div class="row pl-xl-3" >
+              <label class="form-check-label ml-5 pl-4">
+                <input class="form-check-input mr-1" type="checkbox" value="">
+              </label>
+              <p class="font-weight-bold mt-1">광고</p>
+            </div>
+            <!-- 기타 -->
+            <div class="row pl-xl-3" >
+              <label class="form-check-label ml-5 pl-4">
+                <input class="form-check-input mr-1" type="checkbox" value="">
+              </label>
+              <p class="font-weight-bold mt-1">기타</p>
+            </div>
+          </div>
+          <div class="form-group pt-2">
+            <label for="exampleTextarea">신고 내용</label>
+            <textarea class="form-control" id="exampleTextarea" rows="20"></textarea>
+          </div>      
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+            <button type="button" class="btn btn-primary">신고하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal Report -->
 </body>
 </html>
-
-<!-- Modal content -->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">박기철 여행자님의 게시글</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- 여기부터 내용 -->
-                <Main class="Main">
-                    <div class="container">
-                        <section class="posts">
-                            <div class="row justify-content-center">
-                                <div class="col-sm-8 col-12">
-                                    <div class="post pl-6">
-                                        <p class="post_user ml-2 pt-1"><a href="#">'박기철</a> 여행자님'</p>
-                                        <div class="d-flex flex-nowrap ml-2">
-                                            <p class="post_upload">UPLOAD DATE</p>
-                                            <p class="post_date ml-2 pl-1">2017.07.01 PM 03:15</p>
-                                        </div>
-                                    </div>
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                        </ol>
-                                        <div class="carousel-inner" role="listbox">
-                                            <div class="carousel-item active">
-                                                <a href="#" class="card-img_container d-flex justify-content-center align-items-center">
-                                                    <img class="card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt="First slide">
-                                                </a>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <a href="#" class="card-img_container d-flex justify-content-center align-items-center">
-                                                    <img class="card-img-top height-fix" src="http://www.mypetnews.net/news/photo/201312/447_288_511.jpg" alt="First slide">
-                                                </a>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <a href="#" class="card-img_container d-flex justify-content-center align-items-center">
-                                                    <img class="card-img-top height-fix" src="http://www.petzine.co.kr/news/photo/201701/885_2223_5221.jpg" alt="First slide">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </div>
-                                <div class="col-sm-4 col-12">
-                                    <div class="icon pt-3 pr-3 row justify-content-end">
-                                        <button type="button" class="fa fa-heart-o fa-2x px-2 pb-2" aria-hidden="true"></button>
-                                        <button type="button" class="fa fa-heart fa-2x px-2 pb-2" aria-hidden="true"></button>
-                                        <i class="fa fa-map-marker fa-2x px-1" aria-hidden="true"></i>
-                                        <div class="dropdown">
-                                            <button class="btn_option" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa fa-plus fa-2x pb-2" aria-hidden="true"></i>
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> 공유하기 </a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-ban" aria-hidden="true"></i> 신고하기 </a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 차단하기 </a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 수정하기 </a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i> 삭제하기 </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="post_content pt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem enim, sint quas repudiandae, et placeat nesciunt, ipsa harum officia, numquam excepturi dolor fugit nostrum modi. Architecto impedit accusamus sequi laborum.</p>
-                                </div>
-                                <table class="table mt-4">
-                                    <tbody>
-                                        <tr>
-                                            <td width="20%">박기철</td>
-                                            <td width="50%">멋지네요!</td>
-                                            <td width="30%">2017.07.03 AM 10:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="20%">이두희</td>
-                                            <td width="50%">상지대 우승!</td>
-                                            <td width="30%">2017.07.03 AM 10:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="20%">노지승</td>
-                                            <td width="55%">빠잉~</td>
-                                            <td width="25%">2017.07.03 AM 10:00</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="d-flex">
-                                    <nav aria-label="Page navigation example">
-                                        <ul class="pagination">
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Previous">
-                                                    <span aria-hidden="true">&laquo;</span>
-                                                    <span class="sr-only">Previous</span>
-                                                </a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Next">
-                                                    <span aria-hidden="true">&raquo;</span>
-                                                    <span class="sr-only">Next</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="reply">
-                                            <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 reply_text" placeholder="댓글달기">
-                                        </div>
-                                        <div class="reply_submit">
-                                            <button type="submit" class="btn btn-primary">확인</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </Main>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /Modal content -->
-<!-- Modal img -->
-<div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">박기철 여행자님의 게시글</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img class="tourbook__main__img card-img-top height-fix" src="http://cfile27.uf.tistory.com/image/202F1C464DD57EB6158D14" alt>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /Modal img -->

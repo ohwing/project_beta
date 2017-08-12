@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <title lang="ko">투어핀 뉴스피드</title>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/kopubbatang.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- your custom css -->
+    <!--<link rel="stylesheet" href="assets/css/newspeed1_custom.css">-->
+    <link rel="stylesheet" href="assets/css/after_login_main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-sambemi">
+            <a class="navbar-brand navbar-white" href="#">PILOT</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">박기철 여행자님<span class="sr-only">(여행자님 어서오세요! 현재 계급은 파일럿 입니다!)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-white px-0 py-1 mr-3" href="#">여행중</a>
+                </li>
+            </ul>
+            <a class="nav-link navbar-white px-0 py-1 mr-3" href="#"><i class="fa fa-bolt"></i></a>
+            <div class="dropdown">
+                <button class="header__button navbar-white px-0 py-lg-0 py-md-1 py-sm-0 mr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MENU <i class="fa fa-bars"></i>
+                </button>
+                <div class="dropdown-menu nav-menu" aria-labelledby="dropdownMenuButton">
+                    <ul class="py-0">
+                        <li><a class="dropdown-item" href="after_login_main.html">main</a></li>
+                        <li><a class="dropdown-item" href="newspeed1.html">newspeed</a></li>
+                        <li><a class="dropdown-item" href="group_page.html">tourship</a></li>
+                        <li><a class="dropdown-item" href="preference0_reconfirm.html">set-up</a></li>
+                        <li><a class="dropdown-item" href="before_login_main.html">logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /Header -->
+
+    <!-- Main -->
+    <main class="main mt-5">
+          <!--플러스아이콘 눌렀을시 : 추억 하나만 더하기 modal-->
+            <div class="modal-dialog pt-5" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">추억 수정</h5>
+                </div>
+                <div class="modal-body">
+                  <form action="" method="">
+                    <div class="form-group row">
+                      <label for="form__address" class="col-3 col-form-label pr-0">주소</label>
+                      <div class="col-9 pl-0">
+                        <input class="form-control" placeholder="상세 주소" id="form__address">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="example-date-input" class="col-3 col-form-label pr-0">여행날짜</label>
+                      <div class="col-9 pl-0">
+                        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                      </div>
+                    </div>
+                    <div class="memory_icon">
+                      <a class="fa fa-smile-o fa-2x" href="#"></a>
+                      <label class="fa fa-plus fa-2x mb-2">
+                        <input type="file" onchange="javascript:document.getElementById('file_route').value=this.value" >
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" readonly="readonly" id="file_route" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
+                    </div>
+                    <div class="form-group row mb-0">
+                      <label for="example-date-input" class="col-3 col-form-label pr-0">공개설정</label>
+                      <div class="form-group mr-2 col-5">
+                        <select class="form-control" id="exampleSelect1">
+                          <option disabled selected="selected" class="bg-faded">설정</option>
+                          <option>전체공개</option>
+                          <option>친구공개</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row mb-0">
+                      <label for="example-date-input" class="col-3 col-form-label pr-0">여행자그룹</label>
+                      <div class="form-group mr-2 col-5">
+                        <select class="form-control" id="exampleSelect1">
+                          <option>안함</option>
+                          <option>자전거그룹</option>
+                          <option>도보그룹</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="upload_bt">Upload</button>
+                </div>
+              </div>
+            </div>
+        
+        <!--플러스아이콘 눌렀을시 : 추억 여러개 더하기 modal-->
+          <div class="modal fade" id="multiAddModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">추억 추가</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div id="multiModel-body" class="modal-body">
+                   <div class="memory_icon" id="multigps">
+                    <a class="fa fa-smile-o fa-2x" href="#"></a>
+                    <label class="fa fa-plus fa-2x mb-2">
+                      <input type="file" onchange="javascript:document.getElementById('file_route').value=this.value" >
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" readonly="readonly" id="file_route" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                  </div>
+                  <div class="form-group row mb-0">
+                    <label for="example-date-input" class="col-3 col-form-label pr-0">공개설정</label>
+                    <div class="form-group mr-2 col-5">
+                      <select class="form-control" id="exampleSelect1">
+                        <option disabled selected="selected" class="bg-faded">설정</option>
+                        <option>전체공개</option>
+                        <option>친구공개</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-0">
+                    <label for="example-date-input" class="col-3 col-form-label pr-0">여행자그룹</label>
+                    <div class="form-group mr-2 col-5">
+                      <select class="form-control" id="exampleSelect1">
+                        <option>안함</option>
+                        <option>자전거그룹</option>
+                        <option>도보그룹</option>
+                      </select>
+                    </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="upload_bt">Upload</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <!-- /Main -->
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+button:hover , button:focus {
+   cursor: pointer;
+}
+
+/*header*/
+
+.header {
+    height:80px;
+}
+
+
+
+/* main */
+
+.next li a{
+    color: black;
+}
