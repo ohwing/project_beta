@@ -6,7 +6,7 @@ var $ = jQuery;
 var mapContainer = $('#after_login__map')[0];
 var mapOptions = {
 	center: new daum.maps.LatLng(37.57484288719911, 126.93107087733638),
-	level: 12
+	level: 13
 };
 
 var map = new daum.maps.Map(mapContainer, mapOptions);

@@ -104,6 +104,10 @@ ul, ol {
   }
 }
 
+.pin_shape option:nth-child(1){
+  background-image: url(assets/img/pin_setting/base_pin.png);
+}
+
 .form-control:focus {
   border-color: #666666; /* 입력창에 입력할 때 border 색상을 회색으로 설정 */
 }

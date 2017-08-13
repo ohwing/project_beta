@@ -137,7 +137,7 @@
             <p>&#45;&nbsp;러너(RUNNER) : 추억 11개이상 20개 이하</p>
             <p>&#45;&nbsp;라이더(RIDER) : 추억 21개 이상 35개 이하</p>
             <p>&#45;&nbsp;레이서(RACER) : 추억 36개 이상 50개 이하</p>
-            <p>&#45;&nbsp;파일엇(PILOT) : 추억 51개 이상</p>
+            <p>&#45;&nbsp;파일럿(PILOT) : 추억 51개 이상</p>
           </div>
           <!-- 도움말 취소 버튼 -->
           <div class="modal-footer">
@@ -236,7 +236,7 @@
       <div class="form-check">
         <div class="row ml-md-1 ml-lg-5 pl-lg-4 pl-xl-5">
           <label class="form-check-label col-1 ml-5 pl-5">
-            <input class="form-check-input " type="checkbox" value="">
+            <input class="form-check-input switch" type="checkbox" value="option1">
           </label>
           <p class="font-weight-bold mt-1">친구가 나의 추억에 좋아요를 눌렀을 때</p>
         </div>
@@ -245,7 +245,7 @@
       <div class="form-check">
         <div class="row ml-md-1 ml-lg-5 pl-lg-4 pl-xl-5">
           <label class="form-check-label col-1 ml-5 pl-5">
-            <input class="form-check-input" type="checkbox" value="">
+            <input class="form-check-input switch" type="checkbox" value="">
           </label>
           <p class="font-weight-bold mt-1">다른 여행자가 나의 팔로워가 되었을 때</p>
         </div>
@@ -254,7 +254,7 @@
       <div class="form-check">
         <div class="row ml-md-1 ml-lg-5 pl-lg-4 pl-xl-5">
           <label class="form-check-label col-1 ml-5 pl-5">
-            <input class="form-check-input" type="checkbox" value="">
+            <input class="form-check-input switch" type="checkbox" value="">
           </label>
           <p class="font-weight-bold mt-1">친구 신청이 왔을 때</p>
         </div>
@@ -263,7 +263,7 @@
       <div class="form-check">
         <div class="row ml-md-1 ml-lg-5 pl-lg-4 pl-xl-5">
           <label class="form-check-label col-1 ml-5 pl-5">
-            <input class="form-check-input" type="checkbox" value="">
+            <input class="form-check-input switch" type="checkbox" value="">
           </label>
           <p class="font-weight-bold mt-1">친구의 새로운 추억 소식</p>
         </div>
@@ -272,7 +272,7 @@
       <div class="form-check">
         <div class="row ml-md-1 ml-lg-5 pl-lg-4 pl-xl-5">
           <label class="form-check-label col-1 ml-5 pl-5 mb-5">
-            <input class="form-check-input" type="checkbox" value="">
+            <input class="form-check-input switch" type="checkbox" value="">
           </label>
           <p class="font-weight-bold mt-1">그룹 소식</p>
         </div>
@@ -301,7 +301,7 @@
       <div class="form-group row mx-md-4 mx-lg-5 px-lg-5">
         <label for="map_share" class="col-form-label font-weight-bold col-7 col-sm-8 col-md-7 ml-4 ml-xl-5 px-3 px-md-2 px-lg-4 pl-xl-5"><i class="fa fa-minus mr-3"></i>나의 추억&middot;지도 공유 범위 설정</label>
         <div class="map_share_select col-4 col-sm-3 col-md-4 col-lg-3 col-xl-2">
-          <select class="form-control" id="map_share">
+          <select class="form-control switch2" id="map_share">
             <option>친구만</option>
             <option>모두 공개</option>
             <option>비공개</option>
@@ -313,7 +313,7 @@
         <!-- 공개 범위 설정 -->
         <label for="user_information_share" class="col-form-label font-weight-bold col-7 col-sm-8 col-md-7 ml-4 ml-xl-5 px-3 px-md-2 px-lg-4 pl-xl-5"><i class="fa fa-minus mr-3"></i>나의 정보 공개 범위 및 항목 설정</label>
         <div class="user_information_share_select col-4 col-sm-3 col-md-4 col-lg-3 col-xl-2">
-          <select class="form-control" id="user_information_share">
+          <select class="form-control switch2" id="user_information_share">
             <option>친구만</option>
             <option>모두 공개</option>
             <option>비공개</option>
@@ -325,35 +325,35 @@
         <!-- 이름 -->
         <div class="row ml-xl-1 pl-lg-5">
           <label class="form-check-label ml-5 pl-5">
-            <input class="form-check-input mr-1" type="checkbox" value="">
+            <input class="form-check-input switch2 mr-1" type="checkbox" value="">
           </label>
           <p class="font-weight-bold mt-1">이름</p>
         </div>
         <!-- 주소 -->
         <div class="row pl-xl-3" >
           <label class="form-check-label ml-5 pl-4">
-            <input class="form-check-input mr-1" type="checkbox" value="">
+            <input class="form-check-input switch2 mr-1" type="checkbox" value="">
           </label>
           <p class="font-weight-bold mt-1">주소</p>
         </div>
         <!-- 이메일 -->
         <div class="row pl-xl-3" >
           <label class="form-check-label ml-5 pl-4">
-            <input class="form-check-input mr-1" type="checkbox" value="">
+            <input class="form-check-input switch2 mr-1" type="checkbox" value="">
           </label>
           <p class="font-weight-bold mt-1">이메일</p>
         </div>
         <!-- 폰 번호 -->
         <div class="row pl-xl-3" >
           <label class="form-check-label ml-5 pl-4">
-            <input class="form-check-input mr-1" type="checkbox" value="">
+            <input class="form-check-input switch2 mr-1" type="checkbox" value="">
           </label>
           <p class="font-weight-bold mt-1">폰번호</p>
         </div>
         <!-- 생일   -->
         <div class="row pl-xl-3" >
           <label class="form-check-label ml-5 pl-4">
-            <input class="form-check-input mr-1" type="checkbox" value="">
+            <input class="form-check-input switch2 mr-1" type="checkbox" value="">
           </label>
           <p class="font-weight-bold mt-1">생일</p>
         </div>
@@ -372,5 +372,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <!-- 토글 기능 자바스크립트 -->
   <script src="assets/js/navbar/toggle.js"></script>
+  <!-- ON/OFF 스위치 자바스크립트 -->
+  <script src="assets/js/onOffSwitch/switch.js"></script>
 </body>
 </html>
