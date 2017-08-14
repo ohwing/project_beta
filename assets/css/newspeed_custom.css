@@ -135,6 +135,10 @@ a:hover, a:focus {
 }
 
 /* main */
+.btn-secondary:focus {
+  background-color: #ccc;
+}
+
 .card_profile {
     width: 45px;
     height: 45px;
