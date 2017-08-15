@@ -150,7 +150,7 @@
         <!--  </ul>-->
         <!--</div>-->
     </div>
-        
+    
     <div id="menu_wrap" class="bg_white ml-2">
       <div class="option">
         <div>
@@ -229,6 +229,7 @@
         </div>
         
         <div class="p-2">
+          <button type="button" class="fa fa fa-home icons fa-3x main__btn" id="getLocation"></button>
           <button tabindex="0" class="fa fa-map-marker icons fa-3x main__btn" data-trigger="focus" data-toggle="popover_marker" data-placement="top">
               <span class="sr-only">Toggle Dropdown</span>
           </button>
@@ -257,7 +258,7 @@
           <!-- 원본 끝 -->
           
           <button type="button" class="fa fa-minus-circle icons fa-3x main__btn" data-toggle="modal" data-target="#del_memory" href="#del_memory"></button>
-        
+          
           <button type="button" class="fa fa-share-alt icons fa-3x main__btn" data-trigger="focus" data-toggle="popover_share" data-placement="top">
               <span class="sr-only">Toggle Dropdown</span>
           </button>
@@ -285,6 +286,12 @@
       </div>
       <div class="modal-body">
           <div class="form-group row">
+            <label for="title" class="col-3 col-form-label pr-0">제목</label>
+            <div class="col-9 pl-0">
+              <input class="form-control" placeholder="제목" id="title">
+            </div>
+          </div>
+          <div class="form-group row">
             <label for="form__address" class="col-3 col-form-label pr-0">주소</label>
             <div class="col-9 pl-0">
               <input class="form-control" placeholder="상세 주소" id="form__address">
@@ -296,14 +303,14 @@
               <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
             </div>
           </div>
+          
           <div class="memory_icon">
             <a class="fa fa-smile-o fa-2x" href="#"></a>
-            <label class="fa fa-plus fa-2x mb-2">
-              <input type="file" onchange="javascript:document.getElementById('file_route').value=this.value" >
-            </label>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" readonly="readonly" id="file_route" rows="3"></textarea>
+              <label for="files-upload" class="fa fa-plus fa-2x plus-file ml-2"></label> 
+              <input id="files-upload" type="file" multiple accept="image/*"> 
+            <ul id="file-list">  
+            <li class="no-items">(파일이 선택되지 않음)</li>  
+          </ul> 
           </div>
           <div class="form-group">
             <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
@@ -347,38 +354,46 @@
         </button>
       </div>
       <div id="multiModel-body" class="modal-body">
-           <div class="memory_icon" id="multigps">
-            <a class="fa fa-smile-o fa-2x" href="#"></a>
-            <label class="fa fa-plus fa-2x mb-2">
-              <input type="file" onchange="javascript:document.getElementById('file_route').value=this.value" >
-            </label>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" readonly="readonly" id="file_route" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-          </div>
-          <div class="form-group row mb-0">
-            <label for="example-date-input" class="col-3 col-form-label pr-0">공개설정</label>
-            <div class="form-group mr-2 col-5">
-              <select class="form-control" id="exampleSelect1">
-                <option disabled selected="selected" class="bg-faded">설정</option>
-                <option>전체공개</option>
-                <option>친구공개</option>
-              </select>
+        <div class="form-group row">
+            <label for="multi_title" class="col-3 col-form-label pr-0">제목</label>
+            <div class="col-9 pl-0">
+              <input class="form-control" placeholder="제목" id="multi_title">
             </div>
           </div>
-          <div class="form-group row mb-0">
-            <label for="example-date-input" class="col-3 col-form-label pr-0">여행자그룹</label>
-            <div class="form-group mr-2 col-5">
-              <select class="form-control" id="exampleSelect1">
-                <option>안함</option>
-                <option>자전거그룹</option>
-                <option>도보그룹</option>
-              </select>
-            </div>
+         <div class="memory_icon" id="multigps">
+           
+          <a class="fa fa-smile-o fa-2x" href="#"></a>
+          <label class="fa fa-plus fa-2x mb-2">
+            <input type="file" onchange="javascript:document.getElementById('file_route').value=this.value" >
+          </label>
+        </div>
+        
+        <div class="form-group">
+          <textarea class="form-control" readonly="readonly" id="file_route" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+        </div>
+        <div class="form-group row mb-0">
+          <label for="example-date-input" class="col-3 col-form-label pr-0">공개설정</label>
+          <div class="form-group mr-2 col-5">
+            <select class="form-control" id="exampleSelect1">
+              <option disabled selected="selected" class="bg-faded">설정</option>
+              <option>전체공개</option>
+              <option>친구공개</option>
+            </select>
           </div>
+        </div>
+        <div class="form-group row mb-0">
+          <label for="example-date-input" class="col-3 col-form-label pr-0">여행자그룹</label>
+          <div class="form-group mr-2 col-5">
+            <select class="form-control" id="exampleSelect1">
+              <option>안함</option>
+              <option>자전거그룹</option>
+              <option>도보그룹</option>
+            </select>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="upload_bt">Upload</button>
@@ -696,7 +711,29 @@
     </div>
   </div>
   
-  
+     <script> 
+    var filesUpload = document.getElementById("files-upload"), 
+        fileList = document.getElementById("file-list"); 
+     
+    function traverseFiles (files) { 
+      var li, 
+          file, 
+          fileInfo; 
+      fileList.innerHTML = ""; 
+         
+      for (var i=0, il=files.length; i<il; i++) { 
+        li = document.createElement("li"); 
+        file = files[i]; 
+        fileInfo = "<div>"+ file.name + "</div>"; 
+        li.innerHTML = fileInfo; 
+        fileList.appendChild(li); 
+      }; 
+    }; 
+     
+    filesUpload.onchange = function () { 
+      traverseFiles(this.files); 
+    }; 
+  </script>
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Tether -->

@@ -188,28 +188,33 @@ button:focus {
     color:#3C74AA;
 }
 
-.memory_icon label {
-    position:relative;
-    cursor:pointer;
-    display:inline-block;
-    vertical-align: middle;
-    overflow:hidden;
-    width:30px;
-    height:32px;
-    color: #3C74AA;
-    text-align:center;
-    line-height: 30px;
+.plus-file { 
+		display: inline-block;
+		color: #3C74AA;; 
+		background-color: #fdfdfd; 
+		cursor: pointer; 
+		
+	} 
+	
+input[type="file"] { 
+		/* 파일 필드 숨기기 */ 
+		position: absolute; 
+		width: 1px; 
+		height: 1px; 
+		padding: 0; 
+		margin: -1px; 
+		overflow: hidden; 
+		clip:rect(0,0,0,0); 
+		border: 0; 
+		
+	}
+	
+#file-list {
+	border:1px solid #ccc;
+	border-radius : 3px;
 }
 
-.memory_icon label input {
-    position:absolute;
-    width:0;
-    height:0;
-    overflow:hidden;
-}
 
-#exampleTextarea {
-}
 
 .upload_bt {
     margin-left: 180px;
@@ -287,7 +292,7 @@ button:focus {
 
 /*글작성된곳*/
 .textarea {
-  height: 200px;
+  height:  200px;
 }
 /*댓글창*/
 .text {
@@ -319,7 +324,17 @@ button:focus {
     color: #2BA8E2;
 }
 
+.fa-facebook-square{
+    color: #0275d8 !important;
+}
+
+.fa-facebook-square:hover , .fa-facebook-square:focus {
+    cursor:pointer;
+    color: black !important;
+}
+
 /* 박기철 Start */
+
 .map_wrap,
 .map_wrap * {
     margin: 0;

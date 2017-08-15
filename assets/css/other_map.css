@@ -204,3 +204,12 @@ button:focus {
 .twitter_l {
     color: #2BA8E2;
 }
+
+.fa-facebook-square{
+    color: #0275d8 !important;
+}
+
+.fa-facebook-square:hover , .fa-facebook-square:focus {
+    cursor:pointer;
+    color: black !important;
+}
