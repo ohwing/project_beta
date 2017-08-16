@@ -180,6 +180,7 @@ a:hover, a:focus {
 	background-color: transparent;
 }
 
+/*하트 부분*/
 .fa-heart-o {
 	color: #E78A97;
 	background-color: transparent;
@@ -187,9 +188,9 @@ a:hover, a:focus {
 
 .fa-heart {
     color: #E78A97;
-    display: none;
     background-color: transparent;
 }
+/*하트 부분*/
 
 .fa-map-marker {
 	color: #8ECEE3

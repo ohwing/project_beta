@@ -1,12 +1,12 @@
-$(document).ready(function(e){
-    $(".heart_o").click(function(){
-    $(".heart").toggle();
-    $(this).hide();
-  });
-    $(".heart").click(function(){
-    $(".heart_o").toggle();
-    $(this).hide();
-  });
+// $(document).ready(function(e){
+//     $(".heart_o").click(function(){
+//     $(".heart").toggle();
+//     $(this).hide();
+//   });
+//     $(".heart").click(function(){
+//     $(".heart_o").toggle();
+//     $(this).hide();
+//   });
   // On/Off 스위치 토글 기능
   // 알림 설정 스위치
   $(".onoffswitch-label").click(function(){
